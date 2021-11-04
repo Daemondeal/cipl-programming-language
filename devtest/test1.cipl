@@ -1,0 +1,16 @@
+proc a():
+    print "Hello World"
+
+proc b():
+    let a = 1 + 2
+    return "A" ~ "B"
+
+proc c():
+    a = "Hello"
+        .lower()
+
+proc d():
+    a = "World"
+   
+        
+    c = "Zord"

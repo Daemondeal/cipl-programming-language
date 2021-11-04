@@ -1,0 +1,110 @@
+digraph AST {
+    Stmt_58225482[label="let a", shape="box"];
+    Expr_54267293[label="1"];
+    Expr_54267293 -> Stmt_58225482;
+    Stmt_58225482 -> Stmt_18643596
+    Stmt_18643596[label="let b", shape="box"];
+    Expr_33574638[label="1"];
+    Expr_33574638 -> Stmt_18643596;
+    Stmt_18643596 -> Stmt_33736294
+    Stmt_33736294[label="let tmp", shape="box"];
+    Expr_35191196[label="null"];
+    Expr_35191196 -> Stmt_33736294;
+    Stmt_33736294 -> Stmt_48285313
+    Stmt_48285313[label="expr statement", shape="box"];
+    Expr_31914638[label="assign tmp"];
+    Expr_31914638 -> Stmt_48285313;
+    Stmt_48285313 -> Stmt_18796293
+    Stmt_18796293[label="expr statement", shape="box"];
+    Expr_34948909[label="assign b"];
+    Expr_34948909 -> Stmt_18796293;
+    Stmt_18796293 -> Stmt_46104728
+    Stmt_46104728[label="expr statement", shape="box"];
+    Expr_12289376[label="assign a"];
+    Expr_12289376 -> Stmt_46104728;
+    Stmt_46104728 -> Stmt_43495525
+    Stmt_43495525[label="print", shape="box"];
+    Expr_55915408[label="a"];
+    Expr_55915408 -> Stmt_43495525;
+    Stmt_43495525 -> Stmt_33476626
+    Stmt_33476626[label="expr statement", shape="box"];
+    Expr_32854180[label="assign tmp"];
+    Expr_32854180 -> Stmt_33476626;
+    Stmt_33476626 -> Stmt_27252167
+    Stmt_27252167[label="expr statement", shape="box"];
+    Expr_43942917[label="assign b"];
+    Expr_43942917 -> Stmt_27252167;
+    Stmt_27252167 -> Stmt_59941933
+    Stmt_59941933[label="expr statement", shape="box"];
+    Expr_2606490[label="assign a"];
+    Expr_2606490 -> Stmt_59941933;
+    Stmt_59941933 -> Stmt_23458411
+    Stmt_23458411[label="print", shape="box"];
+    Expr_9799115[label="a"];
+    Expr_9799115 -> Stmt_23458411;
+    Stmt_23458411 -> Stmt_21083178
+    Stmt_21083178[label="expr statement", shape="box"];
+    Expr_55530882[label="assign tmp"];
+    Expr_55530882 -> Stmt_21083178;
+    Stmt_21083178 -> Stmt_30015890
+    Stmt_30015890[label="expr statement", shape="box"];
+    Expr_1707556[label="assign b"];
+    Expr_1707556 -> Stmt_30015890;
+    Stmt_30015890 -> Stmt_15368010
+    Stmt_15368010[label="expr statement", shape="box"];
+    Expr_4094363[label="assign a"];
+    Expr_4094363 -> Stmt_15368010;
+    Stmt_15368010 -> Stmt_36849274
+    Stmt_36849274[label="print", shape="box"];
+    Expr_63208015[label="a"];
+    Expr_63208015 -> Stmt_36849274;
+    Stmt_36849274 -> Stmt_32001227
+    Stmt_32001227[label="expr statement", shape="box"];
+    Expr_19575591[label="assign tmp"];
+    Expr_19575591 -> Stmt_32001227;
+    Stmt_32001227 -> Stmt_41962596
+    Stmt_41962596[label="expr statement", shape="box"];
+    Expr_42119052[label="assign b"];
+    Expr_42119052 -> Stmt_41962596;
+    Stmt_41962596 -> Stmt_43527150
+    Stmt_43527150[label="expr statement", shape="box"];
+    Expr_56200037[label="assign a"];
+    Expr_56200037 -> Stmt_43527150;
+    Stmt_43527150 -> Stmt_36038289
+    Stmt_36038289[label="print", shape="box"];
+    Expr_55909147[label="a"];
+    Expr_55909147 -> Stmt_36038289;
+    Stmt_36038289 -> Stmt_33420276
+    Stmt_33420276[label="expr statement", shape="box"];
+    Expr_32347029[label="assign tmp"];
+    Expr_32347029 -> Stmt_33420276;
+    Stmt_33420276 -> Stmt_22687807
+    Stmt_22687807[label="expr statement", shape="box"];
+    Expr_2863675[label="assign b"];
+    Expr_2863675 -> Stmt_22687807;
+    Stmt_22687807 -> Stmt_25773083
+    Stmt_25773083[label="expr statement", shape="box"];
+    Expr_30631159[label="assign a"];
+    Expr_30631159 -> Stmt_25773083;
+    Stmt_25773083 -> Stmt_7244975
+    Stmt_7244975[label="print", shape="box"];
+    Expr_65204782[label="a"];
+    Expr_65204782 -> Stmt_7244975;
+    Stmt_7244975 -> Stmt_49972132
+    Stmt_49972132[label="expr statement", shape="box"];
+    Expr_47096010[label="assign tmp"];
+    Expr_47096010 -> Stmt_49972132;
+    Stmt_49972132 -> Stmt_21210914
+    Stmt_21210914[label="expr statement", shape="box"];
+    Expr_56680499[label="assign b"];
+    Expr_56680499 -> Stmt_21210914;
+    Stmt_21210914 -> Stmt_40362448
+    Stmt_40362448[label="expr statement", shape="box"];
+    Expr_27717712[label="assign a"];
+    Expr_27717712 -> Stmt_40362448;
+    Stmt_40362448 -> Stmt_48132822
+    Stmt_48132822[label="print", shape="box"];
+    Expr_30542218[label="a"];
+    Expr_30542218 -> Stmt_48132822;
+}
+

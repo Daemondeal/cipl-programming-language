@@ -1,0 +1,11 @@
+(let a global)
+(block
+    (proc showA (body
+        (let b banana)
+        (expression (call print a))
+    )
+    (expression (call showA))
+    (let a block)
+    (expression (call showA))
+)
+

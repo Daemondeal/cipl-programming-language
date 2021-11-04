@@ -1,0 +1,8 @@
+let a = "global"
+    proc showA():
+        let b = "banana"
+        print(a) 
+        #
+    showA()
+    let a = "block"
+    showA()
