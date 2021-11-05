@@ -1,0 +1,4 @@
+let a = "outer"
+    let a = "inner"
+    print(a)
+print(a)

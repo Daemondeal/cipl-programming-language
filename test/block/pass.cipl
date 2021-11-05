@@ -1,0 +1,12 @@
+let a = "a"
+    pass
+
+if true:
+    pass
+
+if false:
+    pass
+else:
+    pass
+
+print("ok")

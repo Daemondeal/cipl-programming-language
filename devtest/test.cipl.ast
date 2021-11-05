@@ -1,11 +1,10 @@
-(let a global)
-(block
-    (proc showA (body
-        (let b banana)
-        (expression (call print a))
-    )
-    (expression (call showA))
-    (let a block)
-    (expression (call showA))
-)
+(let i 0)
+break
+(while true (body (block
+    (if (> i 10) (then (block
+        break
+    ))
+    (expression (call print i))
+    (expression (assign i (+ i 1)))
+))
 

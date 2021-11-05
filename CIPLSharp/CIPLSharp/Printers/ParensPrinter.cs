@@ -187,7 +187,7 @@ namespace CIPLSharp.Printers
 
         public string VisitPassStatement(Statement.Pass statement)
         {
-            throw new NotImplementedException();
+            return "pass";
         }
 
         public string VisitBlockStatement(Statement.Block statement)

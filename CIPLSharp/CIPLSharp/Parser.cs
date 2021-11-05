@@ -313,6 +313,7 @@ namespace CIPLSharp
 
         private Statement PassStatement()
         {
+            Consume(LINE_END, "Expected line end after pass");
             return new Statement.Pass(Peek());
         }
 

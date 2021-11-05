@@ -1,0 +1,4 @@
+(expression (call print (not true)))
+(expression (call print (not false)))
+(expression (call print (not (not true))))
+

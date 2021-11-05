@@ -9,6 +9,8 @@ namespace CIPLSharp
         private static readonly Interpreter Interpreter = new Interpreter(); 
         private static bool hadError;
         private static bool hadRuntimeError;
+
+        private static bool shouldReportToStdout;
         
         public static void Main(string[] args)
         {
@@ -32,6 +34,9 @@ namespace CIPLSharp
                             break;
                         case "--help":
                             showUsage = true;
+                            break;
+                        case "--stdout":
+                            shouldReportToStdout = true;
                             break;
                     }
                 }
@@ -96,10 +101,20 @@ namespace CIPLSharp
             var tokens = scanner.ScanTokens();
             if (hadError) System.Environment.Exit(65);
 
-            using var outFile = new StreamWriter(filePath + ".tokens");
-            outFile.WriteLine($"{"Token".PadRight(15)}{"Lexeme".PadRight(15)}{"Line".PadRight(5)}");
-            foreach (var token in tokens)
-                outFile.WriteLine(token.ToString());
+
+            if (shouldReportToStdout)
+            {
+                Console.WriteLine($"{"Token".PadRight(15)}{"Lexeme".PadRight(15)}{"Line".PadRight(5)}");
+                foreach (var token in tokens)
+                    Console.WriteLine(token.ToString());
+            }
+            else
+            {
+                using var outFile = new StreamWriter(filePath + ".tokens");
+                outFile.WriteLine($"{"Token".PadRight(15)}{"Lexeme".PadRight(15)}{"Line".PadRight(5)}");
+                foreach (var token in tokens)
+                    outFile.WriteLine(token.ToString());
+            }
         }
         
         private static void OutputAst(string filePath, AstPrinter printer, string extension)
@@ -114,8 +129,13 @@ namespace CIPLSharp
             
             if (hadError) System.Environment.Exit(65);
 
-            using var outFile = new StreamWriter(filePath + "." + extension);
-            outFile.WriteLine(printer.PrintStatements(expr));
+            if (shouldReportToStdout)
+                Console.WriteLine(printer.PrintStatements(expr));
+            else
+            {
+                using var outFile = new StreamWriter(filePath + "." + extension);
+                outFile.WriteLine(printer.PrintStatements(expr));
+            }
         }
 
         private static void Run(string source)

@@ -1,0 +1,7 @@
+Token          Lexeme         Line 
+IDENTIFIER     print          9    
+LEFT_PAREN     (              9    
+STRING         "ok"           9     ok
+RIGHT_PAREN    )              9    
+LINE_END       \n             10    0
+EOF                           10   

@@ -1,0 +1,7 @@
+(let a outer)
+(block
+    (let a inner)
+    (expression (call print a))
+)
+(expression (call print a))
+

@@ -1,0 +1,12 @@
+(expression (call print Should be true))
+(expression (call print (== true true)))
+(expression (call print (== false false)))
+(expression (call print Should be false))
+(expression (call print (== true false)))
+(expression (call print (== false true)))
+(expression (call print (== true 1)))
+(expression (call print (== false 0)))
+(expression (call print (== true true)))
+(expression (call print (== false false)))
+(expression (call print (== false )))
+

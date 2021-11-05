@@ -106,3 +106,4 @@ def create_file(out_dir, base_name, types):
 
 if __name__ == "__main__":
     main()
+    
