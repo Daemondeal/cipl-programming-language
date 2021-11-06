@@ -163,11 +163,13 @@ namespace CIPLSharp
         public class Class : Statement
         {
             public readonly Token Name;
+            public readonly Expr.Variable Superclass;
             public readonly List<Statement.Procedure> Methods;
 
-            public Class(Token name, List<Statement.Procedure> methods)
+            public Class(Token name, Expr.Variable superclass, List<Statement.Procedure> methods)
             {
                 Name = name;
+                Superclass = superclass;
                 Methods = methods;
             }
 

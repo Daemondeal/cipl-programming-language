@@ -6,7 +6,7 @@ namespace CIPLSharp.Runtime
     {
 
         public VectorClass(string name) 
-            : base(name, new()
+            : base(name, null, new()
             {
                 {"get", new GetMethod()},
                 {"push", new PushMethod()},

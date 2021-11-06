@@ -1,0 +1,4 @@
+let NotAClass = "this is not a class"
+
+class Subclass extends NotAClass:
+    pass

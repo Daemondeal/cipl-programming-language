@@ -7,10 +7,7 @@ declaration ->  varDeclaration
               | statement
 
 
-classDeclaration -> "class" IDENTIFIER ":" INDENT function* DEDENT ;
-
-
-
+classDeclaration -> "class" IDENTIFIER ( "extends" IDENTIFIER )? ":" INDENT function* DEDENT ;
 
 statment -> exprStatement 
           | ifStatement 
@@ -66,7 +63,7 @@ call -> primary ( "(" arguments? ")" | "." IDENTIFIER )*;
 arguments -> expression ( "," expression )* ;
 
 
-primary -> literal | grouping | IDENTIFIER;
+primary -> literal | grouping | IDENTIFIER | "super" "." IDENTIFIER;
 
 literal = NUMBER | STRING | "true" | "false" | "null" ;
 grouping = "(" expression ")" ;

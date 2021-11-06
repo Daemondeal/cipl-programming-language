@@ -34,6 +34,7 @@ namespace CIPLSharp
             { "class", CLASS }, 
             { "super", SUPER }, 
             { "this", THIS },
+            { "extends", EXTENDS }
         };
 
         private int start;

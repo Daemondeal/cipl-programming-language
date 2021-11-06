@@ -16,7 +16,7 @@ namespace CIPLSharp.Runtime
         public object Get(int index)
         {
             if (index < 0 || index > internalList.Count)
-                throw new RuntimeError($"Vector index out of bounds (index: {0}, length: {internalList.Count})");
+                throw new RuntimeError($"Vector index out of bounds (index: {index}, length: {internalList.Count})");
             return internalList[index];
         }
 
@@ -27,6 +27,8 @@ namespace CIPLSharp.Runtime
 
         public void Set(int index, object item)
         {
+            if (index < 0 || index > internalList.Count)
+                throw new RuntimeError($"Vector index out of bounds (index: {index}, length: {internalList.Count})");
             internalList[index] = item;
         }
 

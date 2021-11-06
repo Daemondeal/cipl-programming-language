@@ -11,6 +11,7 @@ namespace CIPLSharp
             T VisitCallExpr(Call expr);
             T VisitGetExpr(Get expr);
             T VisitSetExpr(Set expr);
+            T VisitSuperExpr(Super expr);
             T VisitThisExpr(This expr);
             T VisitUnaryExpr(Unary expr);
             T VisitLiteralExpr(Literal expr);
@@ -107,6 +108,22 @@ namespace CIPLSharp
             public override T Accept<T>(IVisitor<T> visitor)
             {
                 return visitor.VisitSetExpr(this);
+            }
+        }
+        public class Super : Expr
+        {
+            public readonly Token Keyword;
+            public readonly Token Method;
+
+            public Super(Token keyword, Token method)
+            {
+                Keyword = keyword;
+                Method = method;
+            }
+
+            public override T Accept<T>(IVisitor<T> visitor)
+            {
+                return visitor.VisitSuperExpr(this);
             }
         }
         public class This : Expr

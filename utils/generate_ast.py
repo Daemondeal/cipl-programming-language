@@ -13,6 +13,7 @@ def main():
         ("Call", "Expr callee, Token paren, List<Expr> arguments"),
         ("Get", "Expr obj, Token name"),
         ("Set", "Expr obj, Token name, Expr value"),
+        ("Super", "Token keyword, Token method"),
         ("This", "Token keyword"),
         ("Unary", "Token operatorToken, Expr right"),
         ("Literal", "object value"),
@@ -31,7 +32,7 @@ def main():
         ("Break", "Token breakToken"),
         ("Pass", "Token passToken"),
         ("Block", "List<Statement> statements"),
-        ("Class", "Token name, List<Statement.Procedure> methods")
+        ("Class", "Token name, Expr.Variable superclass, List<Statement.Procedure> methods")
     ])
 
 def capitalize(string):

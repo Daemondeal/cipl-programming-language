@@ -116,6 +116,11 @@ namespace CIPLSharp.Printers
             return Parenthesize("set " + expr.Name.Lexeme, expr.Value, expr.Obj);
         }
 
+        public string VisitSuperExpr(Expr.Super expr)
+        {
+            return $"(super {expr.Method.Lexeme})";
+        }
+
         public string VisitThisExpr(Expr.This expr)
         {
             return "this";
@@ -176,7 +181,12 @@ namespace CIPLSharp.Printers
         public string VisitClassStatement(Statement.Class statement)
         {
             var sb = new StringBuilder();
-            sb.Append("(class ").Append(statement.Name.Lexeme).Append('\n');
+            sb.Append("(class ").Append(statement.Name.Lexeme);
+
+            if (statement.Superclass is not null)
+                sb.Append("extends ").Append(statement.Superclass.Name.Lexeme).Append(' ');
+            
+            sb.Append('\n');
 
             nestingLevel++;
             foreach (var proc in statement.Methods)

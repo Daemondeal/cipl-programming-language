@@ -26,7 +26,7 @@ namespace CIPLSharp
         IF, ELSE, WHILE, REPEAT, FOR, BREAK,
         IN,
         PROC, RETURN, PASS,
-        CLASS, SUPER, THIS,
+        CLASS, SUPER, THIS, EXTENDS,
         
         EOF
     }

@@ -23,7 +23,8 @@ namespace CIPLSharp
         private enum ClassType
         {
             NONE,
-            CLASS
+            CLASS,
+            SUBCLASS
         }
 
         public Resolver(Interpreter interpreter)
@@ -142,6 +143,17 @@ namespace CIPLSharp
             Resolve(expr.Value);
             Resolve(expr.Obj);
 
+            return null;
+        }
+
+        public object VisitSuperExpr(Expr.Super expr)
+        {
+            if (currentClass == ClassType.NONE)
+                Cipl.Error(expr.Keyword, "Can't use 'super' outside of a class");
+            else if (currentClass == ClassType.CLASS)
+                Cipl.Error(expr.Keyword, "Can't user 'super' in a class with no superclass.");
+            
+            ResolveLocal(expr, expr.Keyword);
             return null;
         }
 
@@ -281,8 +293,22 @@ namespace CIPLSharp
             var enclosingClass = currentClass;
             currentClass = ClassType.CLASS;
             
+            
+            
             Declare(statement.Name);
             Define(statement.Name);
+            
+            if (statement.Superclass is not null && statement.Name.Lexeme == statement.Superclass.Name.Lexeme)
+                Cipl.Error(statement.Superclass.Name, "A class can't inherit from itself.");
+                
+            if (statement.Superclass is not null)
+            {
+                currentClass = ClassType.SUBCLASS;
+                Resolve(statement.Superclass);
+
+                BeginScope();
+                scopes.Peek()["super"] = true;
+            }
             
             BeginScope();
             scopes.Peek()["this"] = true;
@@ -297,6 +323,9 @@ namespace CIPLSharp
             }
             
             EndScope();
+            
+            if (statement.Superclass is not null)
+                EndScope();
 
             currentClass = enclosingClass;
             

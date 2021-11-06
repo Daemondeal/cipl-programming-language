@@ -8,12 +8,14 @@ namespace CIPLSharp
         
         public readonly string Name;
         private readonly Dictionary<string, ICiplBindable> methods;
+        private readonly CiplClass superclass;
 
-        public CiplClass(string name, Dictionary<string, ICiplBindable> methods)
+        public CiplClass(string name, CiplClass superclass, Dictionary<string, ICiplBindable> methods)
         {
             Name = name;
 
             this.methods = methods;
+            this.superclass = superclass;
         }
 
         public override string ToString()
@@ -45,6 +47,9 @@ namespace CIPLSharp
         {
             if (methods.TryGetValue(name, out var method))
                 return method;
+
+            if (superclass is not null)
+                return superclass.FindMethod(name);
 
             return null;
         }

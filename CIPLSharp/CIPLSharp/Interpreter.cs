@@ -234,6 +234,21 @@ namespace CIPLSharp
             return val;
         }
 
+        public object VisitSuperExpr(Expr.Super expr)
+        {
+            var distance = locals[expr];
+
+            var superclass = (CiplClass) environment.GetAt(distance, "super");
+            var obj = (CiplInstance) environment.GetAt(distance - 1, "this");
+
+            var method = superclass.FindMethod(expr.Method.Lexeme);
+
+            if (method is null)
+                throw new RuntimeError(expr.Method, $"Undefined property '{expr.Method.Lexeme}'");
+            
+            return method.Bind(obj);
+        }
+
         public object VisitThisExpr(Expr.This expr)
         {
             return LookUpVariable(expr.Keyword, expr);
@@ -365,7 +380,21 @@ namespace CIPLSharp
 
         public object VisitClassStatement(Statement.Class statement)
         {
+            object superclass = null;
+            if (statement.Superclass is not null)
+            {
+                superclass = Evaluate(statement.Superclass);
+                if (superclass is not CiplClass)
+                    throw new RuntimeError(statement.Superclass.Name, "Superclass must be a class");
+            }
+            
             environment.Define(statement.Name.Lexeme, null);
+
+            if (statement.Superclass is not null)
+            {
+                environment = new Environment(environment);
+                environment.Define("super", superclass);
+            }
 
             var methods = new Dictionary<string, ICiplBindable>();
 
@@ -375,7 +404,11 @@ namespace CIPLSharp
                 methods[method.Name.Lexeme] = proc;
             }
             
-            var ciplClass = new CiplClass(statement.Name.Lexeme, methods);
+            var ciplClass = new CiplClass(statement.Name.Lexeme, (CiplClass)superclass, methods);
+
+            if (superclass is not null)
+                environment = environment.Enclosing;
+            
             environment.Assign(statement.Name, ciplClass);
 
             return null;

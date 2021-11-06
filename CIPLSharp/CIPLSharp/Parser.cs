@@ -139,6 +139,14 @@ namespace CIPLSharp
         private Statement ClassDeclaration()
         {
             var name = Consume(IDENTIFIER, "Expect class name");
+
+            Expr.Variable superclass = null;
+            if (Match(EXTENDS))
+            {
+                Consume(IDENTIFIER, "Expect superclass name");
+                superclass = new Expr.Variable(Previous());
+            }
+            
             Consume(COLON, "Expect colon after class name");
             Consume(LINE_END, "Expect line end after colon");
             Consume(INDENT, "Expect indent after class name");
@@ -150,7 +158,7 @@ namespace CIPLSharp
 
             Consume(DEDENT, "Expect dedent after class body");
 
-            return new Statement.Class(name, methods);
+            return new Statement.Class(name, superclass, methods);
         }
 
         private Statement VariableDeclaration()
@@ -518,6 +526,14 @@ namespace CIPLSharp
             if (Match(NUMBER, STRING))
                 return new Expr.Literal(Previous().Literal);
 
+            if (Match(SUPER))
+            {
+                var keyword = Previous();
+                Consume(DOT, "Expect '.' after 'super'");
+                var method = Consume(IDENTIFIER, "Expect superclass method name");
+                return new Expr.Super(keyword, method);
+            }
+            
             if (Match(THIS))
                 return new Expr.This(Previous());
 

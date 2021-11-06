@@ -81,7 +81,7 @@
 				},
 				{
 					"name": "keyword.declaration.cipl",
-					"match": "\\b(func|proc|let|class)\\b"
+					"match": "\\b(func|proc|let|class|extends)\\b"
 				},
 				{
 					"name": "keyword.other",
