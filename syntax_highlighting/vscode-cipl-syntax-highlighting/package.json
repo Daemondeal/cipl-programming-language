@@ -1,0 +1,25 @@
+{
+    "name": "cipl-syntax-highlighting",
+    "displayName": "CIPL Syntax Highlighting",
+    "description": "",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.61.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "cipl",
+            "aliases": ["CIPL", "cipl"],
+            "extensions": [".cipl"],
+            "configuration": "./syntaxes/cipl-language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "cipl",
+            "scopeName": "source.cipl",
+            "path": "./syntaxes/cipl.json"
+        }]
+    }
+}
