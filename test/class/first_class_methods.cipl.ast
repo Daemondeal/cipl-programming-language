@@ -1,0 +1,18 @@
+(class Test
+    (proc set_greeting (params greeting) (body
+        (expression (set greeting greeting this))
+    ))
+    (proc println_greeting (body
+        (expression (call println (get greeting this)))
+    ))
+
+)
+(let instance (call Test))
+(expression (call (get set_greeting instance) Hello World!))
+(expression (call (get println_greeting instance)))
+(let instance2 (call Test))
+(expression (call (get set_greeting instance2) Hi there!))
+(expression (call (get println_greeting instance2)))
+(expression (set stolen_greeting (get println_greeting instance) instance2))
+(expression (call (get stolen_greeting instance2)))
+

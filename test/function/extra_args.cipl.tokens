@@ -9,12 +9,12 @@ RIGHT_PAREN    )              1
 COLON          :              1    
 LINE_END       \n             2    
 INDENT                        2    
-IDENTIFIER     print          2    
+IDENTIFIER     println        2    
 LEFT_PAREN     (              2    
 IDENTIFIER     a              2    
 RIGHT_PAREN    )              2    
 LINE_END       \n             3    
-IDENTIFIER     print          3    
+IDENTIFIER     println        3    
 LEFT_PAREN     (              3    
 IDENTIFIER     b              3    
 RIGHT_PAREN    )              3    

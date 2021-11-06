@@ -3,10 +3,10 @@ pass
 
         let a = "a"
         proc f_():
-            print(a)
+            println(a)
         
         f = f_
 
     pass
         let b = "b"
-        f() # Should print a
+        f() # Should println a

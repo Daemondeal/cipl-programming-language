@@ -1,5 +1,5 @@
 Token          Lexeme         Line 
-IDENTIFIER     print          9    
+IDENTIFIER     println        9    
 LEFT_PAREN     (              9    
 STRING         "ok"           9     ok
 RIGHT_PAREN    )              9    

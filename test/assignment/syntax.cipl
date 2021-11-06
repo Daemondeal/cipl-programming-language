@@ -1,4 +1,4 @@
 let a = "before"
 let c = a = "var"
-print(a)
-print(c)
+println(a)
+println(c)

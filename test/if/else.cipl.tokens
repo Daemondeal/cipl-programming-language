@@ -2,14 +2,14 @@ Token          Lexeme         Line
 IF             if             1    
 TRUE           true           1    
 COLON          :              1    
-IDENTIFIER     print          1    
+IDENTIFIER     println        1    
 LEFT_PAREN     (              1    
 STRING         "good"         1     good
 RIGHT_PAREN    )              1    
 LINE_END       \n             2    
 ELSE           else           2    
 COLON          :              2    
-IDENTIFIER     print          2    
+IDENTIFIER     println        2    
 LEFT_PAREN     (              2    
 STRING         "bad"          2     bad
 RIGHT_PAREN    )              2    
@@ -17,14 +17,14 @@ LINE_END       \n             3
 IF             if             4    
 FALSE          false          4    
 COLON          :              4    
-IDENTIFIER     print          4    
+IDENTIFIER     println        4    
 LEFT_PAREN     (              4    
 STRING         "bad"          4     bad
 RIGHT_PAREN    )              4    
 LINE_END       \n             5    
 ELSE           else           5    
 COLON          :              5    
-IDENTIFIER     print          5    
+IDENTIFIER     println        5    
 LEFT_PAREN     (              5    
 STRING         "good"         5     good
 RIGHT_PAREN    )              5    
@@ -41,7 +41,7 @@ ELSE           else           9
 COLON          :              9    
 LINE_END       \n             10   
 INDENT                        10   
-IDENTIFIER     print          10   
+IDENTIFIER     println        10   
 LEFT_PAREN     (              10   
 STRING         "block"        10    block
 RIGHT_PAREN    )              10   

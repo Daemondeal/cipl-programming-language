@@ -26,13 +26,13 @@ IDENTIFIER     assign         6
 LEFT_PAREN     (              6    
 RIGHT_PAREN    )              6    
 LINE_END       \n             7    
-IDENTIFIER     print          7    
+IDENTIFIER     println        7    
 LEFT_PAREN     (              7    
 IDENTIFIER     a              7    
 RIGHT_PAREN    )              7    
 LINE_END       \n             8    
 DEDENT                        8    
-IDENTIFIER     print          8    
+IDENTIFIER     println        8    
 LEFT_PAREN     (              8    
 IDENTIFIER     a              8    
 RIGHT_PAREN    )              8    

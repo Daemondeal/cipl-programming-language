@@ -1,5 +1,5 @@
 (proc f (params a b) (body
     pass
-)
+))
 (expression (call f 1))
 

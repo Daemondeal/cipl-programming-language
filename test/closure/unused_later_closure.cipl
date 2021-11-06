@@ -12,4 +12,4 @@ let closure
             proc returnB():
                 return b
     
-    print(closure())
+    println(closure())

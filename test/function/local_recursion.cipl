@@ -5,4 +5,4 @@ pass
 
         return fib(n - 1) + fib(n - 2)
 
-    print(fib(8))
+    println(fib(8))

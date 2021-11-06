@@ -1,0 +1,90 @@
+Token          Lexeme         Line 
+CLASS          class          1    
+IDENTIFIER     Test           1    
+COLON          :              1    
+LINE_END       \n             2    
+INDENT                        2    
+IDENTIFIER     set_greeting   2    
+LEFT_PAREN     (              2    
+IDENTIFIER     greeting       2    
+RIGHT_PAREN    )              2    
+COLON          :              2    
+LINE_END       \n             3    
+INDENT                        3    
+THIS           this           3    
+DOT            .              3    
+IDENTIFIER     greeting       3    
+EQUAL          =              3    
+IDENTIFIER     greeting       3    
+LINE_END       \n             4    
+DEDENT                        5    
+IDENTIFIER     println_greeting5    
+LEFT_PAREN     (              5    
+RIGHT_PAREN    )              5    
+COLON          :              5    
+LINE_END       \n             6    
+INDENT                        6    
+IDENTIFIER     println        6    
+LEFT_PAREN     (              6    
+THIS           this           6    
+DOT            .              6    
+IDENTIFIER     greeting       6    
+RIGHT_PAREN    )              6    
+LINE_END       \n             7    
+DEDENT                        8    
+DEDENT                        8    
+LET            let            8    
+IDENTIFIER     instance       8    
+EQUAL          =              8    
+IDENTIFIER     Test           8    
+LEFT_PAREN     (              8    
+RIGHT_PAREN    )              8    
+LINE_END       \n             9    
+IDENTIFIER     instance       9    
+DOT            .              9    
+IDENTIFIER     set_greeting   9    
+LEFT_PAREN     (              9    
+STRING         "Hello World!" 9     Hello World!
+RIGHT_PAREN    )              9    
+LINE_END       \n             10   
+IDENTIFIER     instance       10   
+DOT            .              10   
+IDENTIFIER     println_greeting10   
+LEFT_PAREN     (              10   
+RIGHT_PAREN    )              10   
+LINE_END       \n             11   
+LET            let            12   
+IDENTIFIER     instance2      12   
+EQUAL          =              12   
+IDENTIFIER     Test           12   
+LEFT_PAREN     (              12   
+RIGHT_PAREN    )              12   
+LINE_END       \n             13   
+IDENTIFIER     instance2      13   
+DOT            .              13   
+IDENTIFIER     set_greeting   13   
+LEFT_PAREN     (              13   
+STRING         "Hi there!"    13    Hi there!
+RIGHT_PAREN    )              13   
+LINE_END       \n             14   
+IDENTIFIER     instance2      14   
+DOT            .              14   
+IDENTIFIER     println_greeting14   
+LEFT_PAREN     (              14   
+RIGHT_PAREN    )              14   
+LINE_END       \n             15   
+IDENTIFIER     instance2      16   
+DOT            .              16   
+IDENTIFIER     stolen_greeting16   
+EQUAL          =              16   
+IDENTIFIER     instance       16   
+DOT            .              16   
+IDENTIFIER     println_greeting16   
+LINE_END       \n             17   
+IDENTIFIER     instance2      17   
+DOT            .              17   
+IDENTIFIER     stolen_greeting17   
+LEFT_PAREN     (              17   
+RIGHT_PAREN    )              17   
+LINE_END       \n             17   
+EOF                           17   

@@ -21,7 +21,7 @@ IDENTIFIER     i              4
 LINE_END       \n             5    
 DEDENT                        7    
 DEDENT                        7    
-IDENTIFIER     print          7    
+IDENTIFIER     println        7    
 LEFT_PAREN     (              7    
 IDENTIFIER     f              7    
 LEFT_PAREN     (              7    

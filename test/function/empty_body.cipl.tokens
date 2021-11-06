@@ -9,7 +9,7 @@ INDENT                        2
 PASS           pass           2    
 LINE_END       \n             3    
 DEDENT                        4    
-IDENTIFIER     print          4    
+IDENTIFIER     println        4    
 LEFT_PAREN     (              4    
 IDENTIFIER     f              4    
 LEFT_PAREN     (              4    

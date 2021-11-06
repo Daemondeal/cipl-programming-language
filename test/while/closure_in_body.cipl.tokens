@@ -32,7 +32,7 @@ RIGHT_PAREN    )              8
 COLON          :              8    
 LINE_END       \n             9    
 INDENT                        9    
-IDENTIFIER     print          9    
+IDENTIFIER     println        9    
 LEFT_PAREN     (              9    
 IDENTIFIER     j              9    
 RIGHT_PAREN    )              9    

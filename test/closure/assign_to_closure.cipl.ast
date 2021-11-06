@@ -3,16 +3,16 @@
 (block
     (let local local)
     (proc f_ (body
-        (expression (call print local))
+        (expression (call println local))
         (expression (assign local after f))
-        (expression (call print local))
-    )
+        (expression (call println local))
+    ))
     (expression (assign f f_))
     (proc g_ (body
-        (expression (call print local))
+        (expression (call println local))
         (expression (assign local after g))
-        (expression (call print local))
-    )
+        (expression (call println local))
+    ))
     (expression (assign g g_))
 )
 (expression (call f))

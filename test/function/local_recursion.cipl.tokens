@@ -37,7 +37,7 @@ NUMBER         2              6     2
 RIGHT_PAREN    )              6    
 LINE_END       \n             7    
 DEDENT                        8    
-IDENTIFIER     print          8    
+IDENTIFIER     println        8    
 LEFT_PAREN     (              8    
 IDENTIFIER     fib            8    
 LEFT_PAREN     (              8    

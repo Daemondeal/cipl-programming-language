@@ -1,5 +1,5 @@
 Token          Lexeme         Line 
-IDENTIFIER     print          2    
+IDENTIFIER     println        2    
 LEFT_PAREN     (              2    
 NUMBER         2              2     2
 PLUS           +              2    
@@ -8,7 +8,7 @@ STAR           *              2
 NUMBER         4              2     4
 RIGHT_PAREN    )              2    
 LINE_END       \n             3    
-IDENTIFIER     print          5    
+IDENTIFIER     println        5    
 LEFT_PAREN     (              5    
 NUMBER         20             5     20
 MINUS          -              5    
@@ -17,7 +17,7 @@ STAR           *              5
 NUMBER         4              5     4
 RIGHT_PAREN    )              5    
 LINE_END       \n             6    
-IDENTIFIER     print          8    
+IDENTIFIER     println        8    
 LEFT_PAREN     (              8    
 NUMBER         2              8     2
 PLUS           +              8    
@@ -26,7 +26,7 @@ SLASH          /              8
 NUMBER         3              8     3
 RIGHT_PAREN    )              8    
 LINE_END       \n             9    
-IDENTIFIER     print          11   
+IDENTIFIER     println        11   
 LEFT_PAREN     (              11   
 NUMBER         2              11    2
 MINUS          -              11   
@@ -35,7 +35,7 @@ SLASH          /              11
 NUMBER         3              11    3
 RIGHT_PAREN    )              11   
 LINE_END       \n             12   
-IDENTIFIER     print          14   
+IDENTIFIER     println        14   
 LEFT_PAREN     (              14   
 FALSE          false          14   
 EQUAL_EQUAL    ==             14   
@@ -44,7 +44,7 @@ LESS           <              14
 NUMBER         1              14    1
 RIGHT_PAREN    )              14   
 LINE_END       \n             15   
-IDENTIFIER     print          17   
+IDENTIFIER     println        17   
 LEFT_PAREN     (              17   
 FALSE          false          17   
 EQUAL_EQUAL    ==             17   
@@ -53,7 +53,7 @@ GREATER        >              17
 NUMBER         2              17    2
 RIGHT_PAREN    )              17   
 LINE_END       \n             18   
-IDENTIFIER     print          20   
+IDENTIFIER     println        20   
 LEFT_PAREN     (              20   
 FALSE          false          20   
 EQUAL_EQUAL    ==             20   
@@ -62,7 +62,7 @@ LESS_EQUAL     <=             20
 NUMBER         1              20    1
 RIGHT_PAREN    )              20   
 LINE_END       \n             21   
-IDENTIFIER     print          23   
+IDENTIFIER     println        23   
 LEFT_PAREN     (              23   
 FALSE          false          23   
 EQUAL_EQUAL    ==             23   
@@ -71,35 +71,35 @@ GREATER_EQUAL  >=             23
 NUMBER         2              23    2
 RIGHT_PAREN    )              23   
 LINE_END       \n             24   
-IDENTIFIER     print          26   
+IDENTIFIER     println        26   
 LEFT_PAREN     (              26   
 NUMBER         1              26    1
 MINUS          -              26   
 NUMBER         1              26    1
 RIGHT_PAREN    )              26   
 LINE_END       \n             27   
-IDENTIFIER     print          27   
+IDENTIFIER     println        27   
 LEFT_PAREN     (              27   
 NUMBER         1              27    1
 MINUS          -              27   
 NUMBER         1              27    1
 RIGHT_PAREN    )              27   
 LINE_END       \n             28   
-IDENTIFIER     print          28   
+IDENTIFIER     println        28   
 LEFT_PAREN     (              28   
 NUMBER         1              28    1
 MINUS          -              28   
 NUMBER         1              28    1
 RIGHT_PAREN    )              28   
 LINE_END       \n             29   
-IDENTIFIER     print          29   
+IDENTIFIER     println        29   
 LEFT_PAREN     (              29   
 NUMBER         1              29    1
 MINUS          -              29   
 NUMBER         1              29    1
 RIGHT_PAREN    )              29   
 LINE_END       \n             30   
-IDENTIFIER     print          32   
+IDENTIFIER     println        32   
 LEFT_PAREN     (              32   
 LEFT_PAREN     (              32   
 NUMBER         2              32    2

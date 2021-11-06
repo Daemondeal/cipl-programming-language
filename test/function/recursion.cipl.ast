@@ -3,6 +3,6 @@
         (return n)
     ))
     (return (+ (call fib (- n 1)) (call fib (- n 2))))
-)
-(expression (call print (call fib 8)))
+))
+(expression (call println (call fib 8)))
 

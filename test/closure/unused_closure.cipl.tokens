@@ -24,7 +24,7 @@ LINE_END       \n             6
 DEDENT                        8    
 DEDENT                        8    
 DEDENT                        8    
-IDENTIFIER     print          10   
+IDENTIFIER     println        10   
 LEFT_PAREN     (              10   
 STRING         "ok"           10    ok
 RIGHT_PAREN    )              10   

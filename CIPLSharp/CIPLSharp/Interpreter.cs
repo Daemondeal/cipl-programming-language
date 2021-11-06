@@ -19,7 +19,11 @@ namespace CIPLSharp
             
             Globals.Define("clock", new ClockProcedure());
             Globals.Define("print", new PrintProcedure());
+            Globals.Define("println", new PrintLineProcedure());
             Globals.Define("to_string", new ToStringProcedure());
+            Globals.Define("wait", new WaitProcedure());
+            
+            Globals.Define("Vector", new VectorClass("Vector"));
         }
         
         public void Interpret(List<Statement> statements)
@@ -363,7 +367,7 @@ namespace CIPLSharp
         {
             environment.Define(statement.Name.Lexeme, null);
 
-            var methods = new Dictionary<string, CiplProcedure>();
+            var methods = new Dictionary<string, ICiplBindable>();
 
             foreach (var method in statement.Methods)
             {

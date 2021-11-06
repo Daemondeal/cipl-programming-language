@@ -1,10 +1,10 @@
-if true: print("good") 
-else: print("bad")
+if true: println("good") 
+else: println("bad")
 
-if false: print("bad") 
-else: print("good")
+if false: println("bad") 
+else: println("good")
 
 if false:
     pass
 else:
-    print("block")
+    println("block")

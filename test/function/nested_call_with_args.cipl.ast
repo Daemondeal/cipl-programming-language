@@ -1,11 +1,11 @@
 (proc return_arg (params arg) (body
     (return arg)
-)
+))
 (proc return_fun_call_with_arg (params pr arg) (body
     (return (call (call return_arg pr) arg))
-)
-(proc print_arg (params arg) (body
-    (expression (call print arg))
-)
-(expression (call return_fun_call_with_arg print_arg Hello World))
+))
+(proc println_arg (params arg) (body
+    (expression (call println arg))
+))
+(expression (call return_fun_call_with_arg println_arg Hello World))
 

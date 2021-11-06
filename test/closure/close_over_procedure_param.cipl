@@ -2,7 +2,7 @@ let f
 
 proc foo(param):
     proc f_():
-        print(param)
+        println(param)
 
     f = f_
 
@@ -10,4 +10,4 @@ proc foo(param):
 foo("param")
 
 
-f() # Should print param
+f() # Should println param

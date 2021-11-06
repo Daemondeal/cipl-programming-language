@@ -47,7 +47,7 @@ LINE_END       \n             14
 DEDENT                        15   
 DEDENT                        15   
 DEDENT                        15   
-IDENTIFIER     print          15   
+IDENTIFIER     println        15   
 LEFT_PAREN     (              15   
 IDENTIFIER     closure        15   
 LEFT_PAREN     (              15   

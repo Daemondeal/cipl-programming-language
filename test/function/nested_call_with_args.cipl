@@ -4,7 +4,7 @@ proc return_arg(arg):
 proc return_fun_call_with_arg(pr, arg):
     return return_arg(pr)(arg)
 
-proc print_arg(arg):
-    print(arg)
+proc println_arg(arg):
+    println(arg)
 
-return_fun_call_with_arg(print_arg, "Hello World")
+return_fun_call_with_arg(println_arg, "Hello World")

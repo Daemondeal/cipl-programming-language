@@ -1,5 +1,5 @@
 pass
     let local = "local"
     proc f():
-        print(local)
+        println(local)
     f()

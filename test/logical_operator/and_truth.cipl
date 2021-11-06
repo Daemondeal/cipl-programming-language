@@ -1,7 +1,7 @@
 # Only false and null should be not truthy
-print(false and "bad")
-print(null and "bad")
+println(false and "bad")
+println(null and "bad")
 
-print(true and "ok")
-print(0 and "ok")
-print("" and "ok")
+println(true and "ok")
+println(0 and "ok")
+println("" and "ok")

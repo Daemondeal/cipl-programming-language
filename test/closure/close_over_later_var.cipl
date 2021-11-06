@@ -2,8 +2,8 @@ proc f():
     let a = "a"
     let b = "b"
     proc g():
-        print(b)
-        print(a)
+        println(b)
+        println(a)
     g()
 
 f()

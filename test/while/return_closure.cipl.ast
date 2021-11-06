@@ -2,11 +2,11 @@
     (while true (body (block
         (let i i)
         (proc g (body
-            (expression (call print i))
-        )
+            (expression (call println i))
+        ))
         (return g)
     ))
-)
+))
 (let h (call f))
 (expression (call h))
 

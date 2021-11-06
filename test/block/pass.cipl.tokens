@@ -31,7 +31,7 @@ INDENT                        10
 PASS           pass           10   
 LINE_END       \n             11   
 DEDENT                        12   
-IDENTIFIER     print          12   
+IDENTIFIER     println        12   
 LEFT_PAREN     (              12   
 STRING         "ok"           12    ok
 RIGHT_PAREN    )              12   

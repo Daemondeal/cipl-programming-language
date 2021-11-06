@@ -1,15 +1,15 @@
-print("Should be true")
-print(true == true)
-print(false == false)
+println("Should be true")
+println(true == true)
+println(false == false)
 
-print("Should be false")
-print(true == false)
-print(false == true)
+println("Should be false")
+println(true == false)
+println(false == true)
 
 
-print(true == 1)
-print(false == 0)
-print(true == "true")
-print(false == "false")
-print(false == "")
+println(true == 1)
+println(false == 0)
+println(true == "true")
+println(false == "false")
+println(false == "")
 

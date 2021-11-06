@@ -4,7 +4,7 @@ IDENTIFIER     a              1
 EQUAL          =              1    
 STRING         "before"       1     before
 LINE_END       \n             2    
-IDENTIFIER     print          2    
+IDENTIFIER     println        2    
 LEFT_PAREN     (              2    
 IDENTIFIER     a              2    
 RIGHT_PAREN    )              2    
@@ -13,19 +13,19 @@ IDENTIFIER     a              4
 EQUAL          =              4    
 STRING         "after"        4     after
 LINE_END       \n             5    
-IDENTIFIER     print          5    
+IDENTIFIER     println        5    
 LEFT_PAREN     (              5    
 IDENTIFIER     a              5    
 RIGHT_PAREN    )              5    
 LINE_END       \n             6    
-IDENTIFIER     print          7    
+IDENTIFIER     println        7    
 LEFT_PAREN     (              7    
 IDENTIFIER     a              7    
 EQUAL          =              7    
 STRING         "arg"          7     arg
 RIGHT_PAREN    )              7    
 LINE_END       \n             8    
-IDENTIFIER     print          8    
+IDENTIFIER     println        8    
 LEFT_PAREN     (              8    
 IDENTIFIER     a              8    
 RIGHT_PAREN    )              8    

@@ -4,4 +4,4 @@ proc f():
         return i
 
 
-print(f())
+println(f())

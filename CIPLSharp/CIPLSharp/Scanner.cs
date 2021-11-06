@@ -78,7 +78,7 @@ namespace CIPLSharp
 
         private char PeekNextIgnoringWhitespace()
         {
-            for (var i = current + 1; i < source.Length; i++)
+            for (var i = current; i < source.Length; i++)
             {
                 if (!char.IsWhiteSpace(source[i]))
                     return source[i];

@@ -1,2 +1,2 @@
-print("ok")
+println("ok")
 # Comment

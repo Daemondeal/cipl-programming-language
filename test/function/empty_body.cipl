@@ -1,4 +1,4 @@
 proc f():
     pass
 
-print(f())
+println(f())

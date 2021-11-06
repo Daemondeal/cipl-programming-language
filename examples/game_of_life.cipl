@@ -1,0 +1,94 @@
+let FULL = "█"
+let EMPTY = "░"
+
+proc clear():
+    println("\\033[2J")
+
+proc create_board(w, h):
+    let board = Vector()
+    for i in 0..w:
+        let row = Vector()
+        for j in 0..h:
+            row.push(false)
+        board.push(row)
+
+    return board
+
+proc print_board(board):
+    for i in 0..board.len():
+        let row = board.get(i)
+        for j in 0..row.len():
+            if row.get(j):
+                print(FULL ~ " ")
+            else:
+                print(EMPTY ~ " ")
+
+        println("")
+
+
+proc do_generation(board):
+    let w = board.len()
+    let h = board.get(0).len()
+
+    let new_board = create_board(w, h)
+
+    proc in_bounds(i, j):
+        return i >= 0 and j >= 0 and i < w and j < h
+
+    proc count_neighbours(i, j):
+        let count = 0
+
+        for di in -1..2:
+            for dj in -1..2:
+                if (di != 0 or dj != 0) and in_bounds(i + di, j + dj) and board.get(i + di).get(j + dj):
+                    count = count + 1
+        
+        return count
+
+    for i in 0..w:
+        for j in 0..h:
+            let status = board.get(i).get(j)
+            let neighbours = count_neighbours(i, j)
+
+            if status and (neighbours == 2 or neighbours == 3):
+                new_board.get(i).set(j, true)
+            else:
+                if not status and neighbours == 3:
+                    new_board.get(i).set(j, true)
+
+    
+    return new_board
+
+proc create_pentadecathlon(board, x, y):
+    proc set(i, j, val):
+        board.get(i).set(j, val)
+
+    set(y, x, true)
+    set(y, x + 1, true)
+
+    set(y + 1, x + 2, true)
+    set(y - 1, x + 2, true)
+
+    set(y, x + 3, true)
+    set(y, x + 4, true)
+    set(y, x + 5, true)
+    set(y, x + 6, true)
+
+    set(y + 1, x + 7, true)
+    set(y - 1, x + 7, true)
+
+    set(y, x + 8, true)
+    set(y, x + 9, true)
+
+
+
+
+let board = create_board(20, 30)
+
+create_pentadecathlon(board, 10, 10)
+
+for i in 0..100:
+    board = do_generation(board)
+    print_board(board)
+    println("")
+    wait(0.33)

@@ -2,8 +2,8 @@ pass
     let foo = "closure"
     proc f():
         pass
-            print(foo)
+            println(foo)
             let foo = "shadow"
-            print(foo)
-        print(foo)
+            println(foo)
+        println(foo)
     f()

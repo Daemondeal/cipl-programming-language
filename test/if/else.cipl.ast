@@ -1,8 +1,8 @@
-(if true (then (expression (call print good)) (else (expression (call print bad)))
-(if false (then (expression (call print bad)) (else (expression (call print good)))
+(if true (then (expression (call println good)) (else (expression (call println bad)))
+(if false (then (expression (call println bad)) (else (expression (call println good)))
 (if false (then (block
     pass
 ) (else (block
-    (expression (call print block))
+    (expression (call println block))
 ))
 

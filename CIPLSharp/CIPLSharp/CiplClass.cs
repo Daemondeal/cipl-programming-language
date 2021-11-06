@@ -7,9 +7,9 @@ namespace CIPLSharp
         public const string InitName = "init";
         
         public readonly string Name;
-        private readonly Dictionary<string, CiplProcedure> methods;
+        private readonly Dictionary<string, ICiplBindable> methods;
 
-        public CiplClass(string name, Dictionary<string, CiplProcedure> methods)
+        public CiplClass(string name, Dictionary<string, ICiplBindable> methods)
         {
             Name = name;
 
@@ -21,14 +21,14 @@ namespace CIPLSharp
             return $"<class {Name}>";
         }
 
-        public int Arity()
+        public virtual int Arity()
         {
             var initializer = FindMethod(InitName);
             if (initializer == null) return 0;
             return initializer.Arity();
         }
 
-        public object Call(Interpreter interpreter, List<object> arguments)
+        public virtual object Call(Interpreter interpreter, List<object> arguments)
         {
             var instance = new CiplInstance(this);
             var initializer = FindMethod(CiplClass.InitName);
@@ -41,7 +41,7 @@ namespace CIPLSharp
             return instance;
         }
 
-        public CiplProcedure FindMethod(string name)
+        public ICiplBindable FindMethod(string name)
         {
             if (methods.TryGetValue(name, out var method))
                 return method;

@@ -1,5 +1,5 @@
 Token          Lexeme         Line 
-IDENTIFIER     print          1    
+IDENTIFIER     println        1    
 LEFT_PAREN     (              1    
 NUMBER         123            1     123
 DOT            .              1    

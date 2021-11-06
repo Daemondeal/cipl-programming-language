@@ -1,0 +1,54 @@
+Token          Lexeme         Line 
+CLASS          class          1    
+IDENTIFIER     Greeter        1    
+COLON          :              1    
+LINE_END       \n             2    
+INDENT                        2    
+IDENTIFIER     init           2    
+LEFT_PAREN     (              2    
+IDENTIFIER     greeting       2    
+RIGHT_PAREN    )              2    
+COLON          :              2    
+LINE_END       \n             3    
+INDENT                        3    
+THIS           this           3    
+DOT            .              3    
+IDENTIFIER     greeting       3    
+EQUAL          =              3    
+IDENTIFIER     greeting       3    
+LINE_END       \n             4    
+DEDENT                        5    
+IDENTIFIER     greet          5    
+LEFT_PAREN     (              5    
+RIGHT_PAREN    )              5    
+COLON          :              5    
+LINE_END       \n             6    
+INDENT                        6    
+IDENTIFIER     println        6    
+LEFT_PAREN     (              6    
+THIS           this           6    
+DOT            .              6    
+IDENTIFIER     greeting       6    
+RIGHT_PAREN    )              6    
+LINE_END       \n             7    
+DEDENT                        8    
+DEDENT                        8    
+IDENTIFIER     Greeter        8    
+LEFT_PAREN     (              8    
+STRING         "Hello World"  8     Hello World
+RIGHT_PAREN    )              8    
+DOT            .              8    
+IDENTIFIER     greet          8    
+LEFT_PAREN     (              8    
+RIGHT_PAREN    )              8    
+LINE_END       \n             9    
+IDENTIFIER     Greeter        9    
+LEFT_PAREN     (              9    
+STRING         "Hi there"     9     Hi there
+RIGHT_PAREN    )              9    
+DOT            .              9    
+IDENTIFIER     greet          9    
+LEFT_PAREN     (              9    
+RIGHT_PAREN    )              9    
+LINE_END       \n             9    
+EOF                           9    

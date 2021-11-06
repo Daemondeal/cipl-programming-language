@@ -7,4 +7,4 @@ pass
 
 # No segfaults if we got to here
 
-print("ok")
+println("ok")

@@ -4,5 +4,5 @@ let a = "global"
 
     let a = "inner"
     assign()
-    print(a) # Should be "inner"
-print(a) # Should be "assigned"
+    println(a) # Should be "inner"
+println(a) # Should be "assigned"

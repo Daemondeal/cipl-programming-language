@@ -55,7 +55,7 @@ NUMBER         1              10    1
 RIGHT_PAREN    )              10   
 LINE_END       \n             11   
 DEDENT                        12   
-IDENTIFIER     print          12   
+IDENTIFIER     println        12   
 LEFT_PAREN     (              12   
 IDENTIFIER     is_even        12   
 LEFT_PAREN     (              12   
@@ -63,7 +63,7 @@ NUMBER         4              12    4
 RIGHT_PAREN    )              12   
 RIGHT_PAREN    )              12   
 LINE_END       \n             13   
-IDENTIFIER     print          13   
+IDENTIFIER     println        13   
 LEFT_PAREN     (              13   
 IDENTIFIER     is_odd         13   
 LEFT_PAREN     (              13   

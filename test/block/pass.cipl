@@ -9,4 +9,4 @@ if false:
 else:
     pass
 
-print("ok")
+println("ok")

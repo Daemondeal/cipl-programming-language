@@ -3,6 +3,6 @@
         (let i i)
         (return i)
     ))
-)
-(expression (call print (call f)))
+))
+(expression (call println (call f)))
 

@@ -1,4 +1,4 @@
-(expression (call print (not true)))
-(expression (call print (not false)))
-(expression (call print (not (not true))))
+(expression (call println (not true)))
+(expression (call println (not false)))
+(expression (call println (not (not true))))
 

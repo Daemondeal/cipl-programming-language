@@ -1,6 +1,6 @@
 (proc f (params a b) (body
-    (expression (call print a))
-    (expression (call print b))
-)
+    (expression (call println a))
+    (expression (call println b))
+))
 (expression (call f 1 2 3 4))
 

@@ -1,5 +1,5 @@
 (proc f (body
     pass
-)
-(expression (call print (call f)))
+))
+(expression (call println (call f)))
 

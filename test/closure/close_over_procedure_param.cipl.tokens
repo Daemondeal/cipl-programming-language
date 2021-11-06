@@ -17,7 +17,7 @@ RIGHT_PAREN    )              4
 COLON          :              4    
 LINE_END       \n             5    
 INDENT                        5    
-IDENTIFIER     print          5    
+IDENTIFIER     println        5    
 LEFT_PAREN     (              5    
 IDENTIFIER     param          5    
 RIGHT_PAREN    )              5    

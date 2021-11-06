@@ -5,14 +5,14 @@ COLON          :              1
 IF             if             1    
 FALSE          false          1    
 COLON          :              1    
-IDENTIFIER     print          1    
+IDENTIFIER     println        1    
 LEFT_PAREN     (              1    
 STRING         "bad"          1     bad
 RIGHT_PAREN    )              1    
 LINE_END       \n             2    
 ELSE           else           2    
 COLON          :              2    
-IDENTIFIER     print          2    
+IDENTIFIER     println        2    
 LEFT_PAREN     (              2    
 STRING         "good"         2     good
 RIGHT_PAREN    )              2    
@@ -23,14 +23,14 @@ COLON          :              5
 IF             if             5    
 TRUE           true           5    
 COLON          :              5    
-IDENTIFIER     print          5    
+IDENTIFIER     println        5    
 LEFT_PAREN     (              5    
 STRING         "bad"          5     bad
 RIGHT_PAREN    )              5    
 LINE_END       \n             6    
 ELSE           else           6    
 COLON          :              6    
-IDENTIFIER     print          6    
+IDENTIFIER     println        6    
 LEFT_PAREN     (              6    
 STRING         "bad"          6     bad
 RIGHT_PAREN    )              6    

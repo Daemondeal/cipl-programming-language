@@ -1,33 +1,33 @@
 Token          Lexeme         Line 
-IDENTIFIER     print          2    
+IDENTIFIER     println        2    
 LEFT_PAREN     (              2    
 FALSE          false          2    
 AND            and            2    
 STRING         "bad"          2     bad
 RIGHT_PAREN    )              2    
 LINE_END       \n             3    
-IDENTIFIER     print          3    
+IDENTIFIER     println        3    
 LEFT_PAREN     (              3    
 NULL           null           3    
 AND            and            3    
 STRING         "bad"          3     bad
 RIGHT_PAREN    )              3    
 LINE_END       \n             4    
-IDENTIFIER     print          5    
+IDENTIFIER     println        5    
 LEFT_PAREN     (              5    
 TRUE           true           5    
 AND            and            5    
 STRING         "ok"           5     ok
 RIGHT_PAREN    )              5    
 LINE_END       \n             6    
-IDENTIFIER     print          6    
+IDENTIFIER     println        6    
 LEFT_PAREN     (              6    
 NUMBER         0              6     0
 AND            and            6    
 STRING         "ok"           6     ok
 RIGHT_PAREN    )              6    
 LINE_END       \n             7    
-IDENTIFIER     print          7    
+IDENTIFIER     println        7    
 LEFT_PAREN     (              7    
 STRING         ""             7     
 AND            and            7    

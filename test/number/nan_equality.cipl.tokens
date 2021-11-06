@@ -6,33 +6,33 @@ NUMBER         0              1     0
 SLASH          /              1    
 NUMBER         0              1     0
 LINE_END       \n             2    
-IDENTIFIER     print          3    
+IDENTIFIER     println        3    
 LEFT_PAREN     (              3    
 IDENTIFIER     nan            3    
 RIGHT_PAREN    )              3    
 LINE_END       \n             4    
-IDENTIFIER     print          4    
+IDENTIFIER     println        4    
 LEFT_PAREN     (              4    
 IDENTIFIER     nan            4    
 EQUAL_EQUAL    ==             4    
 NUMBER         0              4     0
 RIGHT_PAREN    )              4    
 LINE_END       \n             5    
-IDENTIFIER     print          5    
+IDENTIFIER     println        5    
 LEFT_PAREN     (              5    
 IDENTIFIER     nan            5    
 BANG_EQUAL     !=             5    
 NUMBER         1              5     1
 RIGHT_PAREN    )              5    
 LINE_END       \n             6    
-IDENTIFIER     print          7    
+IDENTIFIER     println        7    
 LEFT_PAREN     (              7    
 IDENTIFIER     nan            7    
 EQUAL_EQUAL    ==             7    
 IDENTIFIER     nan            7    
 RIGHT_PAREN    )              7    
 LINE_END       \n             8    
-IDENTIFIER     print          8    
+IDENTIFIER     println        8    
 LEFT_PAREN     (              8    
 IDENTIFIER     nan            8    
 BANG_EQUAL     !=             8    

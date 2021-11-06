@@ -1,6 +1,6 @@
-(expression (call print (and false bad)))
-(expression (call print (and null bad)))
-(expression (call print (and true ok)))
-(expression (call print (and 0 ok)))
-(expression (call print (and  ok)))
+(expression (call println (and false bad)))
+(expression (call println (and null bad)))
+(expression (call println (and true ok)))
+(expression (call println (and 0 ok)))
+(expression (call println (and  ok)))
 

@@ -2,7 +2,7 @@ let f
 
     let local = "local"
     proc f_():
-        print(local)
+        println(local)
 
     f = f_
 

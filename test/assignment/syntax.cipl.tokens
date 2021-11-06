@@ -11,12 +11,12 @@ IDENTIFIER     a              2
 EQUAL          =              2    
 STRING         "var"          2     var
 LINE_END       \n             3    
-IDENTIFIER     print          3    
+IDENTIFIER     println        3    
 LEFT_PAREN     (              3    
 IDENTIFIER     a              3    
 RIGHT_PAREN    )              3    
 LINE_END       \n             4    
-IDENTIFIER     print          4    
+IDENTIFIER     println        4    
 LEFT_PAREN     (              4    
 IDENTIFIER     c              4    
 RIGHT_PAREN    )              4    

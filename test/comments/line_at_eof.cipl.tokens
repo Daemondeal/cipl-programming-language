@@ -1,5 +1,5 @@
 Token          Lexeme         Line 
-IDENTIFIER     print          1    
+IDENTIFIER     println        1    
 LEFT_PAREN     (              1    
 STRING         "ok"           1     ok
 RIGHT_PAREN    )              1    

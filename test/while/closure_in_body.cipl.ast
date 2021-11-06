@@ -5,8 +5,8 @@
 (while (< i 4) (body (block
     (let j i)
     (proc f (body
-        (expression (call print j))
-    )
+        (expression (call println j))
+    ))
     (if (== j 1) (then (block
         (expression (assign f1 f))
     ) (else (block

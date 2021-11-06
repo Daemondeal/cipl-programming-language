@@ -2,7 +2,7 @@ using System.Collections.Generic;
 
 namespace CIPLSharp
 {
-    public class CiplProcedure : ICiplCallable
+    public class CiplProcedure : ICiplBindable
     {
         private readonly Statement.Procedure declaration;
         private readonly Environment closure;
@@ -44,7 +44,7 @@ namespace CIPLSharp
             return "<proc " + declaration.Name.Lexeme + ">";
         }
 
-        public CiplProcedure Bind(CiplInstance instance)
+        public ICiplBindable Bind(CiplInstance instance)
         {
             var env = new Environment(closure);
             env.Define("this", instance);

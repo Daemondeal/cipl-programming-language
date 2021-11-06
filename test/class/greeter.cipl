@@ -3,7 +3,7 @@ class Greeter:
         this.greeting = greeting
 
     greet():
-        print(this.greeting)
+        println(this.greeting)
 
 Greeter("Hello World").greet()
 Greeter("Hi there").greet()

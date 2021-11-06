@@ -1,7 +1,7 @@
 (let nan (/ 0 0))
-(expression (call print nan))
-(expression (call print (== nan 0)))
-(expression (call print (!= nan 1)))
-(expression (call print (== nan nan)))
-(expression (call print (!= nan nan)))
+(expression (call println nan))
+(expression (call println (== nan 0)))
+(expression (call println (!= nan 1)))
+(expression (call println (== nan nan)))
+(expression (call println (!= nan nan)))
 

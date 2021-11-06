@@ -1,4 +1,4 @@
 ::stdout::
 
 ::stderr::
-Error on line 1 at `\.`: Expected line end after value.
+Error on line 1 at `\n`: Expect property name after '.'

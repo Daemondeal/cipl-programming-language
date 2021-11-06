@@ -4,8 +4,8 @@ pass
     (block
         (let a a)
         (proc f_ (body
-            (expression (call print a))
-        )
+            (expression (call println a))
+        ))
         (expression (assign f f_))
     )
     pass

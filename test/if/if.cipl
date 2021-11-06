@@ -1,10 +1,10 @@
-if true: print("good")
-if false: print("bad")
+if true: println("good")
+if false: println("bad")
 
 if true:
-    print("block")
+    println("block")
 
 let a = false
 
 if a = true:
-    print(a)
+    println(a)

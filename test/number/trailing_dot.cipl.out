@@ -1,4 +1,4 @@
 ::stdout::
 
 ::stderr::
-Error on line 1 at `\.`: Expect ')' after arguments
+Error on line 1 at `\)`: Expect property name after '.'

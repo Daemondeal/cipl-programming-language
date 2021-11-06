@@ -1,19 +1,19 @@
 Token          Lexeme         Line 
-IDENTIFIER     print          1    
+IDENTIFIER     println        1    
 LEFT_PAREN     (              1    
 NUMBER         1              1     1
 OR             or             1    
 TRUE           true           1    
 RIGHT_PAREN    )              1    
 LINE_END       \n             2    
-IDENTIFIER     print          2    
+IDENTIFIER     println        2    
 LEFT_PAREN     (              2    
 FALSE          false          2    
 OR             or             2    
 NUMBER         1              2     1
 RIGHT_PAREN    )              2    
 LINE_END       \n             3    
-IDENTIFIER     print          3    
+IDENTIFIER     println        3    
 LEFT_PAREN     (              3    
 FALSE          false          3    
 OR             or             3    
@@ -22,14 +22,14 @@ OR             or             3
 TRUE           true           3    
 RIGHT_PAREN    )              3    
 LINE_END       \n             4    
-IDENTIFIER     print          5    
+IDENTIFIER     println        5    
 LEFT_PAREN     (              5    
 FALSE          false          5    
 OR             or             5    
 FALSE          false          5    
 RIGHT_PAREN    )              5    
 LINE_END       \n             6    
-IDENTIFIER     print          6    
+IDENTIFIER     println        6    
 LEFT_PAREN     (              6    
 FALSE          false          6    
 OR             or             6    
@@ -38,7 +38,7 @@ OR             or             6
 FALSE          false          6    
 RIGHT_PAREN    )              6    
 LINE_END       \n             7    
-IDENTIFIER     print          7    
+IDENTIFIER     println        7    
 LEFT_PAREN     (              7    
 FALSE          false          7    
 OR             or             7    
@@ -75,12 +75,12 @@ EQUAL          =              11
 STRING         "bad"          11    bad
 RIGHT_PAREN    )              11   
 LINE_END       \n             12   
-IDENTIFIER     print          13   
+IDENTIFIER     println        13   
 LEFT_PAREN     (              13   
 IDENTIFIER     a              13   
 RIGHT_PAREN    )              13   
 LINE_END       \n             14   
-IDENTIFIER     print          14   
+IDENTIFIER     println        14   
 LEFT_PAREN     (              14   
 IDENTIFIER     b              14   
 RIGHT_PAREN    )              14   

@@ -1,6 +1,6 @@
 (proc foo (body
     pass
-)
-(expression (call print foo))
-(expression (call print print))
+))
+(expression (call println foo))
+(expression (call println println))
 

@@ -2,7 +2,7 @@ proc f():
     while true:
         let i = "i"
         proc g():
-            print(i)
+            println(i)
         return g
 
 let h = f()

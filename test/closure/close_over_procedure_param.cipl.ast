@@ -1,10 +1,10 @@
 (let f null)
 (proc foo (params param) (body
     (proc f_ (body
-        (expression (call print param))
-    )
+        (expression (call println param))
+    ))
     (expression (assign f f_))
-)
+))
 (expression (call foo param))
 (expression (call f))
 

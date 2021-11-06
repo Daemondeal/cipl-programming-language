@@ -2,8 +2,8 @@
 (block
     (let local local)
     (proc f_ (body
-        (expression (call print local))
-    )
+        (expression (call println local))
+    ))
     (expression (assign f f_))
 )
 (expression (call f))

@@ -4,6 +4,6 @@ let c = "c"
 
 a = b = c
 
-print(a)
-print(b)
-print(c)
+println(a)
+println(b)
+println(c)

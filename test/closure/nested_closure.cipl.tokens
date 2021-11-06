@@ -45,17 +45,17 @@ RIGHT_PAREN    )              8
 COLON          :              8    
 LINE_END       \n             9    
 INDENT                        9    
-IDENTIFIER     print          9    
+IDENTIFIER     println        9    
 LEFT_PAREN     (              9    
 IDENTIFIER     a              9    
 RIGHT_PAREN    )              9    
 LINE_END       \n             10   
-IDENTIFIER     print          10   
+IDENTIFIER     println        10   
 LEFT_PAREN     (              10   
 IDENTIFIER     b              10   
 RIGHT_PAREN    )              10   
 LINE_END       \n             11   
-IDENTIFIER     print          11   
+IDENTIFIER     println        11   
 LEFT_PAREN     (              11   
 IDENTIFIER     c              11   
 RIGHT_PAREN    )              11   

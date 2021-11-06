@@ -2,10 +2,10 @@
     (let a a)
     (let b b)
     (proc g (body
-        (expression (call print b))
-        (expression (call print a))
-    )
+        (expression (call println b))
+        (expression (call println a))
+    ))
     (expression (call g))
-)
+))
 (expression (call f))
 

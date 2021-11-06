@@ -9,7 +9,7 @@ namespace CIPLSharp.Runtime
 
         public override object Call(Interpreter interpreter, List<object> arguments)
         {
-            Console.WriteLine(Interpreter.Stringify(arguments[0]));
+            Console.Write(Interpreter.Stringify(arguments[0]));
             return null;
         }
     }

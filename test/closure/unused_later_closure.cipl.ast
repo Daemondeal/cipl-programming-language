@@ -5,14 +5,14 @@
         (let b b)
         (proc returnA (body
             (return a)
-        )
+        ))
         (expression (assign closure returnA))
         (if false (then (block
             (proc returnB (body
                 (return b)
-            )
+            ))
         ))
     )
-    (expression (call print (call closure)))
+    (expression (call println (call closure)))
 )
 

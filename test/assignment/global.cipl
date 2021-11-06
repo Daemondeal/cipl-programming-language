@@ -1,8 +1,8 @@
 let a = "before"
-print(a)
+println(a)
 
 a = "after"
-print(a)
+println(a)
 
-print(a = "arg")
-print(a)
+println(a = "arg")
+println(a)

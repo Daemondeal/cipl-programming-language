@@ -2,8 +2,8 @@ let f
 
     let a = "a"
     proc f_():
-        print(a)
-        print(a)
+        println(a)
+        println(a)
 
     f = f_
 

@@ -1,6 +1,6 @@
-if true: if false: print("bad") 
-else: print("good")
+if true: if false: println("bad") 
+else: println("good")
 
 
-if false: if true: print("bad") 
-else: print("bad")
+if false: if true: println("bad") 
+else: println("bad")

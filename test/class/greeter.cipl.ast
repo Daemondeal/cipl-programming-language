@@ -1,0 +1,12 @@
+(class Greeter
+    (proc init (params greeting) (body
+        (expression (set greeting greeting this))
+    ))
+    (proc greet (body
+        (expression (call println (get greeting this)))
+    ))
+
+)
+(expression (call (get greet (call Greeter Hello World))))
+(expression (call (get greet (call Greeter Hi there))))
+

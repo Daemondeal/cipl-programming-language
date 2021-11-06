@@ -9,5 +9,5 @@ proc is_odd(n):
     
     return is_even(n - 1)
 
-print(is_even(4))
-print(is_odd(3))
+println(is_even(4))
+println(is_odd(3))

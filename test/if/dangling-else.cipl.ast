@@ -1,3 +1,3 @@
-(if true (then (if false (then (expression (call print bad)) (else (expression (call print good))))
-(if false (then (if true (then (expression (call print bad)) (else (expression (call print bad))))
+(if true (then (if false (then (expression (call println bad)) (else (expression (call println good))))
+(if false (then (if true (then (expression (call println bad)) (else (expression (call println bad))))
 

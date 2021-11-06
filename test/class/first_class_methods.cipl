@@ -2,16 +2,16 @@ class Test:
     set_greeting(greeting):
         this.greeting = greeting
 
-    print_greeting():
-        print(this.greeting)
+    println_greeting():
+        println(this.greeting)
 
 let instance = Test()
 instance.set_greeting("Hello World!")
-instance.print_greeting()
+instance.println_greeting()
 
 let instance2 = Test()
 instance2.set_greeting("Hi there!")
-instance2.print_greeting()
+instance2.println_greeting()
 
-instance2.stolen_greeting = instance.print_greeting
-instance2.stolen_greeting() # Should print "Hello World"
+instance2.stolen_greeting = instance.println_greeting
+instance2.stolen_greeting() # Should println "Hello World"

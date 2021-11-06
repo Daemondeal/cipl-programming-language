@@ -4,12 +4,12 @@ pass
     (proc f (body
         pass
         (block
-            (expression (call print foo))
+            (expression (call println foo))
             (let foo shadow)
-            (expression (call print foo))
+            (expression (call println foo))
         )
-        (expression (call print foo))
-    )
+        (expression (call println foo))
+    ))
     (expression (call f))
 )
 
