@@ -1,0 +1,4 @@
+::stdout::
+
+::stderr::
+Error on line 3 at `=`: Invalid assignment target.

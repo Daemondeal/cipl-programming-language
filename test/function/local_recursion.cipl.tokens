@@ -1,0 +1,49 @@
+Token          Lexeme         Line 
+PASS           pass           1    
+LINE_END       \n             2    
+INDENT                        2    
+PROC           proc           2    
+IDENTIFIER     fib            2    
+LEFT_PAREN     (              2    
+IDENTIFIER     n              2    
+RIGHT_PAREN    )              2    
+COLON          :              2    
+LINE_END       \n             3    
+INDENT                        3    
+IF             if             3    
+IDENTIFIER     n              3    
+LESS           <              3    
+NUMBER         2              3     2
+COLON          :              3    
+LINE_END       \n             4    
+INDENT                        4    
+RETURN         return         4    
+IDENTIFIER     n              4    
+LINE_END       \n             5    
+DEDENT                        6    
+RETURN         return         6    
+IDENTIFIER     fib            6    
+LEFT_PAREN     (              6    
+IDENTIFIER     n              6    
+MINUS          -              6    
+NUMBER         1              6     1
+RIGHT_PAREN    )              6    
+PLUS           +              6    
+IDENTIFIER     fib            6    
+LEFT_PAREN     (              6    
+IDENTIFIER     n              6    
+MINUS          -              6    
+NUMBER         2              6     2
+RIGHT_PAREN    )              6    
+LINE_END       \n             7    
+DEDENT                        8    
+IDENTIFIER     print          8    
+LEFT_PAREN     (              8    
+IDENTIFIER     fib            8    
+LEFT_PAREN     (              8    
+NUMBER         8              8     8
+RIGHT_PAREN    )              8    
+RIGHT_PAREN    )              8    
+LINE_END       \n             8    
+DEDENT                        8    
+EOF                           8    

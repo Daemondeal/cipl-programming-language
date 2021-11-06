@@ -1,5 +1,0 @@
-digraph test {
-    1[label="hello"]
-    2[label="world"]
-    1 -> 2;
-}

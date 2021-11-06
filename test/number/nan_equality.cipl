@@ -1,0 +1,8 @@
+let nan = 0/0
+
+print(nan)
+print(nan == 0)
+print(nan != 1)
+
+print(nan == nan)
+print(nan != nan)

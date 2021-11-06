@@ -1,0 +1,7 @@
+::stdout::
+local
+after f
+after f
+after g
+
+::stderr::

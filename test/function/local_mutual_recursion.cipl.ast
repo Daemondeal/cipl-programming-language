@@ -1,0 +1,17 @@
+pass
+(block
+    (proc is_even (params n) (body
+        (if (== n 0) (then (block
+            (return true)
+        ))
+        (return (call is_odd (- n 1)))
+    )
+    (proc is_odd (params n) (body
+        (if (== n 0) (then (block
+            (return false)
+        ))
+        (return (call is_even (- n 1)))
+    )
+    (expression (call print (call is_even 4)))
+)
+

@@ -1,0 +1,7 @@
+print(123)
+print(968132)
+print(0)
+print(-0)
+
+print(123.456)
+print(-0.001)

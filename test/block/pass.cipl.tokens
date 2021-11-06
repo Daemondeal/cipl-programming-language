@@ -3,33 +3,33 @@ LET            let            1
 IDENTIFIER     a              1    
 EQUAL          =              1    
 STRING         "a"            1     a
-LINE_END       \n             2     0
+LINE_END       \n             2    
 INDENT                        2    
 PASS           pass           2    
-LINE_END       \n             3     4
+LINE_END       \n             3    
 DEDENT                        4    
 IF             if             4    
 TRUE           true           4    
 COLON          :              4    
-LINE_END       \n             5     0
+LINE_END       \n             5    
 INDENT                        5    
 PASS           pass           5    
-LINE_END       \n             6     4
+LINE_END       \n             6    
 DEDENT                        7    
 IF             if             7    
 FALSE          false          7    
 COLON          :              7    
-LINE_END       \n             8     0
+LINE_END       \n             8    
 INDENT                        8    
 PASS           pass           8    
-LINE_END       \n             9     4
+LINE_END       \n             9    
 DEDENT                        9    
 ELSE           else           9    
 COLON          :              9    
-LINE_END       \n             10    0
+LINE_END       \n             10   
 INDENT                        10   
 PASS           pass           10   
-LINE_END       \n             11    4
+LINE_END       \n             11   
 DEDENT                        12   
 IDENTIFIER     print          12   
 LEFT_PAREN     (              12   

@@ -1,0 +1,58 @@
+Token          Lexeme         Line 
+LET            let            1    
+IDENTIFIER     closure        1    
+LINE_END       \n             2    
+INDENT                        3    
+LET            let            3    
+IDENTIFIER     a              3    
+EQUAL          =              3    
+STRING         "a"            3     a
+LINE_END       \n             4    
+INDENT                        5    
+LET            let            5    
+IDENTIFIER     b              5    
+EQUAL          =              5    
+STRING         "b"            5     b
+LINE_END       \n             6    
+PROC           proc           6    
+IDENTIFIER     returnA        6    
+LEFT_PAREN     (              6    
+RIGHT_PAREN    )              6    
+COLON          :              6    
+LINE_END       \n             7    
+INDENT                        7    
+RETURN         return         7    
+IDENTIFIER     a              7    
+LINE_END       \n             8    
+DEDENT                        9    
+IDENTIFIER     closure        9    
+EQUAL          =              9    
+IDENTIFIER     returnA        9    
+LINE_END       \n             10   
+IF             if             11   
+FALSE          false          11   
+COLON          :              11   
+LINE_END       \n             12   
+INDENT                        12   
+PROC           proc           12   
+IDENTIFIER     returnB        12   
+LEFT_PAREN     (              12   
+RIGHT_PAREN    )              12   
+COLON          :              12   
+LINE_END       \n             13   
+INDENT                        13   
+RETURN         return         13   
+IDENTIFIER     b              13   
+LINE_END       \n             14   
+DEDENT                        15   
+DEDENT                        15   
+DEDENT                        15   
+IDENTIFIER     print          15   
+LEFT_PAREN     (              15   
+IDENTIFIER     closure        15   
+LEFT_PAREN     (              15   
+RIGHT_PAREN    )              15   
+RIGHT_PAREN    )              15   
+LINE_END       \n             15   
+DEDENT                        15   
+EOF                           15   

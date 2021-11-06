@@ -1,0 +1,4 @@
+::stdout::
+
+::stderr::
+Error: Undefined variable 'undef'. at line 1

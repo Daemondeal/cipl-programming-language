@@ -1,0 +1,47 @@
+Token          Lexeme         Line 
+IF             if             1    
+TRUE           true           1    
+COLON          :              1    
+IDENTIFIER     print          1    
+LEFT_PAREN     (              1    
+STRING         "good"         1     good
+RIGHT_PAREN    )              1    
+LINE_END       \n             2    
+IF             if             2    
+FALSE          false          2    
+COLON          :              2    
+IDENTIFIER     print          2    
+LEFT_PAREN     (              2    
+STRING         "bad"          2     bad
+RIGHT_PAREN    )              2    
+LINE_END       \n             3    
+IF             if             4    
+TRUE           true           4    
+COLON          :              4    
+LINE_END       \n             5    
+INDENT                        5    
+IDENTIFIER     print          5    
+LEFT_PAREN     (              5    
+STRING         "block"        5     block
+RIGHT_PAREN    )              5    
+LINE_END       \n             6    
+DEDENT                        7    
+LET            let            7    
+IDENTIFIER     a              7    
+EQUAL          =              7    
+FALSE          false          7    
+LINE_END       \n             8    
+IF             if             9    
+IDENTIFIER     a              9    
+EQUAL          =              9    
+TRUE           true           9    
+COLON          :              9    
+LINE_END       \n             10   
+INDENT                        10   
+IDENTIFIER     print          10   
+LEFT_PAREN     (              10   
+IDENTIFIER     a              10   
+RIGHT_PAREN    )              10   
+LINE_END       \n             10   
+DEDENT                        10   
+EOF                           10   

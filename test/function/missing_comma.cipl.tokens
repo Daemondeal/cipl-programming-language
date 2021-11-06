@@ -1,0 +1,20 @@
+Token          Lexeme         Line 
+PROC           proc           1    
+IDENTIFIER     f              1    
+LEFT_PAREN     (              1    
+IDENTIFIER     a              1    
+COMMA          ,              1    
+IDENTIFIER     b              1    
+IDENTIFIER     c              1    
+COMMA          ,              1    
+IDENTIFIER     d              1    
+COMMA          ,              1    
+IDENTIFIER     e              1    
+RIGHT_PAREN    )              1    
+COLON          :              1    
+LINE_END       \n             2    
+INDENT                        2    
+PASS           pass           2    
+LINE_END       \n             2    
+DEDENT                        2    
+EOF                           2    

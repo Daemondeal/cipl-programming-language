@@ -1,0 +1,8 @@
+Token          Lexeme         Line 
+IF             if             1    
+TRUE           true           1    
+COLON          :              1    
+LET            let            1    
+IDENTIFIER     foo            1    
+LINE_END       \n             1    
+EOF                           1    

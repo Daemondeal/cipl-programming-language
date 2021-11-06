@@ -1,0 +1,10 @@
+(if true (then (expression (call print good)))
+(if false (then (expression (call print bad)))
+(if true (then (block
+    (expression (call print block))
+))
+(let a false)
+(if (assign a true) (then (block
+    (expression (call print a))
+))
+

@@ -1,0 +1,5 @@
+(proc f (body
+    pass
+)
+(expression (call print (call f)))
+

@@ -1,0 +1,12 @@
+Token          Lexeme         Line 
+WHILE          while          1    
+TRUE           true           1    
+COLON          :              1    
+PROC           proc           1    
+IDENTIFIER     foo            1    
+LEFT_PAREN     (              1    
+RIGHT_PAREN    )              1    
+COLON          :              1    
+PASS           pass           1    
+LINE_END       \n             1    
+EOF                           1    

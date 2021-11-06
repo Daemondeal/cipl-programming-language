@@ -1,0 +1,46 @@
+Token          Lexeme         Line 
+PASS           pass           1    
+LINE_END       \n             2    
+INDENT                        2    
+LET            let            2    
+IDENTIFIER     f              2    
+LINE_END       \n             3    
+INDENT                        4    
+LET            let            4    
+IDENTIFIER     a              4    
+EQUAL          =              4    
+STRING         "a"            4     a
+LINE_END       \n             5    
+PROC           proc           5    
+IDENTIFIER     f_             5    
+LEFT_PAREN     (              5    
+RIGHT_PAREN    )              5    
+COLON          :              5    
+LINE_END       \n             6    
+INDENT                        6    
+IDENTIFIER     print          6    
+LEFT_PAREN     (              6    
+IDENTIFIER     a              6    
+RIGHT_PAREN    )              6    
+LINE_END       \n             7    
+DEDENT                        8    
+IDENTIFIER     f              8    
+EQUAL          =              8    
+IDENTIFIER     f_             8    
+LINE_END       \n             9    
+DEDENT                        10   
+PASS           pass           10   
+LINE_END       \n             11   
+INDENT                        11   
+LET            let            11   
+IDENTIFIER     b              11   
+EQUAL          =              11   
+STRING         "b"            11    b
+LINE_END       \n             12   
+IDENTIFIER     f              12   
+LEFT_PAREN     (              12   
+RIGHT_PAREN    )              12   
+LINE_END       \n             13   
+DEDENT                        13   
+DEDENT                        13   
+EOF                           13   

@@ -1,0 +1,9 @@
+proc f():
+    let a = "a"
+    let b = "b"
+    proc g():
+        print(b)
+        print(a)
+    g()
+
+f()

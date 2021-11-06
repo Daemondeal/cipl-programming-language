@@ -1,0 +1,4 @@
+::stdout::
+
+::stderr::
+Error: Undefined variable 'is_odd'. at line 5

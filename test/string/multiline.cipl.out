@@ -1,0 +1,9 @@
+::stdout::
+Start Multiline
+1
+2
+3
+4
+End Multiline
+
+::stderr::

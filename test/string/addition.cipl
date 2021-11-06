@@ -1,0 +1,2 @@
+print("H" ~ "i")
+print("H" + "i") # This is not valid and should give an error

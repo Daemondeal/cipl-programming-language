@@ -1,0 +1,7 @@
+# Only false and null should be not truthy
+print(false and "bad")
+print(null and "bad")
+
+print(true and "ok")
+print(0 and "ok")
+print("" and "ok")

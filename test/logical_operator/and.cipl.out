@@ -1,0 +1,10 @@
+::stdout::
+false
+1
+false
+true
+3
+true
+false
+
+::stderr::

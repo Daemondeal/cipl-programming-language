@@ -1,0 +1,7 @@
+::stdout::
+before
+after
+arg
+arg
+
+::stderr::

@@ -1,6 +1,7 @@
 #!/usr/bin/python
 
 import subprocess
+import time
 import sys
 import os
 
@@ -42,6 +43,9 @@ def clean_files():
     for file in subprocess.check_output(["find", ".", "-name", "*.ast"]).decode('utf-8').splitlines():
         subprocess.call(["rm", file])
 
+    clean_isolated_file()
+
+def clean_isolated_file():
     # Delete ISOLATION_FOLDER_NAME if it exists
     if os.path.exists(ISOLATION_FOLDER_NAME):
         subprocess.call(["rm", "-r", ISOLATION_FOLDER_NAME])
@@ -131,21 +135,16 @@ def test_file(file):
     return True
 
 def isolate_file(file):
-    # Create folder "testing" if it doesn't exist
+    # Create folder ISOLATION_FOLDER_NAME if it doesn't exist
     if not os.path.exists(ISOLATION_FOLDER_NAME):
         os.makedirs(ISOLATION_FOLDER_NAME)
-    # If folder "testing" already existed, delete every file inside of it
+    # If folder ISOLATION_FOLDER_NAME already existed, delete every file inside of it
     else:
         for f in os.listdir(ISOLATION_FOLDER_NAME):
             os.remove(ISOLATION_FOLDER_NAME + "/" + f)
 
-
-    # Copy file, file.tokens, file.ast and file.out to "testing" folder
-    subprocess.call(["cp", file, "testing"])
-    subprocess.call(["cp", file + ".tokens", "testing"])
-    subprocess.call(["cp", file + ".ast", "testing"])
-    subprocess.call(["cp", file + ".out", "testing"])
-    
+    # Copy file to ISOLATION_FOLDER_NAME folder and rename it to main.cipl
+    subprocess.call(["cp", file, ISOLATION_FOLDER_NAME + "/main.cipl"])
 
 
 def perform_all_tests():
@@ -174,11 +173,14 @@ def main():
     # Get command line parameters
     params = {arg[1:]: True for arg in sys.argv[1:] if arg[0] == '-'}
 
-    possible_commands = ["record", "test", "clean", "record-file", "record-folder", "test-file", "test-folder", "isolate"]
+    possible_commands = ["record", "test", "clean", "clean-isolated", "record-file", "record-folder", "test-file", "test-folder", "isolate"]
 
     if len(args) == 0 or args[0] not in possible_commands:
         print("Usage: test.py " + "|".join(possible_commands))
         return
+
+    # Save start time
+    start_time = time.time()
 
     if args[0] == "record":
         record_all_tests()
@@ -213,6 +215,14 @@ def main():
             print("Usage: test.py isolate <file>")
             return
         isolate_file(args[1])
+    elif args[0] == "clean-isolated":
+        if len(args) != 1:
+            print("Usage: test.py clean-isolated")
+            return
+        clean_isolated_file()
+
+    # Print elapsed time
+    print("Done in " + str(round(time.time() - start_time, 2)) + "s")
 
 
 if __name__ == "__main__":

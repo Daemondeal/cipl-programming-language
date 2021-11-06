@@ -92,14 +92,17 @@ namespace CIPLSharp
         {
             if (a is null && b is null) return true;
             if (a is null || b is null) return false;
-
+            
+            // double.NaN.Equals(double.NaN) is true, so we handle nan equality manually
+            if (a is double.NaN || b is double.NaN) return false;
+            
             return a.Equals(b);
         }
 
         private static void CheckNumberOperands(Token op, params object[] operands)
         {
             if (operands.Any(obj => obj is not double))
-                throw new RuntimeError(op, "Operands must be numbers.");
+                throw new RuntimeError(op, "Operands must be numbers");
         }
 
         private object Evaluate(Expr expression)
@@ -156,7 +159,7 @@ namespace CIPLSharp
                 case TILDE:
                     if (left is string && right is string)
                         return (string) left + (string) right;
-                    throw new RuntimeError(expr.OperatorToken, "Operands must be Strings.");
+                    throw new RuntimeError(expr.OperatorToken, "Operands must be Strings");
                 case MINUS:
                     CheckNumberOperands(expr.OperatorToken, left, right);
                     return (double) left - (double) right;
@@ -185,7 +188,7 @@ namespace CIPLSharp
             }
             
             // Unreachable
-            throw new RuntimeError(expr.OperatorToken, "Got to unreachable code. This could be a parser error.");
+            throw new RuntimeError(expr.OperatorToken, "Got to unreachable code. This could be a parser error");
         }
 
         public object VisitCallExpr(Expr.Call expr)
@@ -195,7 +198,7 @@ namespace CIPLSharp
             var arguments = expr.Arguments.Select(Evaluate).ToList();
 
             if (callee is not ICiplCallable callable)
-                throw new RuntimeError(expr.Paren, "Can only call procedures and classes.");
+                throw new RuntimeError(expr.Paren, "Can only call procedures and classes");
 
             if (arguments.Count != callable.Arity())
                 throw new RuntimeError(expr.Paren, $"Expected {callable.Arity()} arguments but got {arguments.Count} for {Stringify(callable)}()");
@@ -217,7 +220,7 @@ namespace CIPLSharp
             }
 
             // Unreachable
-            throw new RuntimeError(expr.OperatorToken, "Got to unreachable code. This could be a parser error.");
+            throw new RuntimeError(expr.OperatorToken, "Got to unreachable code. This could be a parser error");
         }
 
         public object VisitLiteralExpr(Expr.Literal expr)
@@ -233,7 +236,6 @@ namespace CIPLSharp
         public object VisitVariableExpr(Expr.Variable expr)
         {
             return LookUpVariable(expr.Name, expr);
-            // return environment.Get(expr.Name);
         }
 
         public object VisitAssignExpr(Expr.Assign expr)
@@ -311,7 +313,7 @@ namespace CIPLSharp
         public object VisitBreakStatement(Statement.Break statement)
         {
             if (loopDepth < 0)
-                throw new RuntimeError(statement.BreakToken, "Breaking while not in a loop");
+                throw new RuntimeError(statement.BreakToken, "Can't break outside loops");
 
             shouldBreak = true;
             return null;

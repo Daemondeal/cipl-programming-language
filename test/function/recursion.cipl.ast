@@ -1,0 +1,8 @@
+(proc fib (params n) (body
+    (if (< n 2) (then (block
+        (return n)
+    ))
+    (return (+ (call fib (- n 1)) (call fib (- n 2))))
+)
+(expression (call print (call fib 8)))
+

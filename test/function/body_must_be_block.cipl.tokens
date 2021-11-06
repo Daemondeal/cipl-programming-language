@@ -1,0 +1,9 @@
+Token          Lexeme         Line 
+PROC           proc           1    
+IDENTIFIER     f              1    
+LEFT_PAREN     (              1    
+RIGHT_PAREN    )              1    
+COLON          :              1    
+NUMBER         123            1     123
+LINE_END       \n             1    
+EOF                           1    

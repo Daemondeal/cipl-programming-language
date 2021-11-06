@@ -1,0 +1,9 @@
+pass
+    let foo = "closure"
+    proc f():
+        pass
+            print(foo)
+            let foo = "shadow"
+            print(foo)
+        print(foo)
+    f()

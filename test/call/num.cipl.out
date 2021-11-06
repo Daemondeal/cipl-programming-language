@@ -1,0 +1,4 @@
+::stdout::
+
+::stderr::
+Error: Can only call procedures and classes at line 1

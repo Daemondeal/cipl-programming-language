@@ -1,0 +1,16 @@
+Token          Lexeme         Line 
+IDENTIFIER     print          1    
+LEFT_PAREN     (              1    
+STRING         "("            1     (
+TILDE          ~              1    
+STRING         ""             1     
+TILDE          ~              1    
+STRING         ")"            1     )
+RIGHT_PAREN    )              1    
+LINE_END       \n             2    
+IDENTIFIER     print          2    
+LEFT_PAREN     (              2    
+STRING         "String"       2     String
+RIGHT_PAREN    )              2    
+LINE_END       \n             3    
+EOF                           3    

@@ -1,0 +1,75 @@
+Token          Lexeme         Line 
+LET            let            1    
+IDENTIFIER     f              1    
+LINE_END       \n             2    
+LET            let            2    
+IDENTIFIER     g              2    
+LINE_END       \n             3    
+INDENT                        4    
+LET            let            4    
+IDENTIFIER     local          4    
+EQUAL          =              4    
+STRING         "local"        4     local
+LINE_END       \n             5    
+PROC           proc           5    
+IDENTIFIER     f_             5    
+LEFT_PAREN     (              5    
+RIGHT_PAREN    )              5    
+COLON          :              5    
+LINE_END       \n             6    
+INDENT                        6    
+IDENTIFIER     print          6    
+LEFT_PAREN     (              6    
+IDENTIFIER     local          6    
+RIGHT_PAREN    )              6    
+LINE_END       \n             7    
+IDENTIFIER     local          7    
+EQUAL          =              7    
+STRING         "after f"      7     after f
+LINE_END       \n             8    
+IDENTIFIER     print          8    
+LEFT_PAREN     (              8    
+IDENTIFIER     local          8    
+RIGHT_PAREN    )              8    
+LINE_END       \n             9    
+DEDENT                        10   
+IDENTIFIER     f              10   
+EQUAL          =              10   
+IDENTIFIER     f_             10   
+LINE_END       \n             11   
+PROC           proc           12   
+IDENTIFIER     g_             12   
+LEFT_PAREN     (              12   
+RIGHT_PAREN    )              12   
+COLON          :              12   
+LINE_END       \n             13   
+INDENT                        13   
+IDENTIFIER     print          13   
+LEFT_PAREN     (              13   
+IDENTIFIER     local          13   
+RIGHT_PAREN    )              13   
+LINE_END       \n             14   
+IDENTIFIER     local          14   
+EQUAL          =              14   
+STRING         "after g"      14    after g
+LINE_END       \n             15   
+IDENTIFIER     print          15   
+LEFT_PAREN     (              15   
+IDENTIFIER     local          15   
+RIGHT_PAREN    )              15   
+LINE_END       \n             16   
+DEDENT                        17   
+IDENTIFIER     g              17   
+EQUAL          =              17   
+IDENTIFIER     g_             17   
+LINE_END       \n             18   
+DEDENT                        19   
+IDENTIFIER     f              19   
+LEFT_PAREN     (              19   
+RIGHT_PAREN    )              19   
+LINE_END       \n             20   
+IDENTIFIER     g              20   
+LEFT_PAREN     (              20   
+RIGHT_PAREN    )              20   
+LINE_END       \n             20   
+EOF                           20   

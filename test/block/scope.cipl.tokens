@@ -3,18 +3,18 @@ LET            let            1
 IDENTIFIER     a              1    
 EQUAL          =              1    
 STRING         "outer"        1     outer
-LINE_END       \n             2     0
+LINE_END       \n             2    
 INDENT                        2    
 LET            let            2    
 IDENTIFIER     a              2    
 EQUAL          =              2    
 STRING         "inner"        2     inner
-LINE_END       \n             3     4
+LINE_END       \n             3    
 IDENTIFIER     print          3    
 LEFT_PAREN     (              3    
 IDENTIFIER     a              3    
 RIGHT_PAREN    )              3    
-LINE_END       \n             4     4
+LINE_END       \n             4    
 DEDENT                        4    
 IDENTIFIER     print          4    
 LEFT_PAREN     (              4    

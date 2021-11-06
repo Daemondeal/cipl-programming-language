@@ -1,0 +1,10 @@
+if true: print("good")
+if false: print("bad")
+
+if true:
+    print("block")
+
+let a = false
+
+if a = true:
+    print(a)

@@ -1,0 +1,16 @@
+Token          Lexeme         Line 
+IDENTIFIER     print          1    
+LEFT_PAREN     (              1    
+STRING         "H"            1     H
+TILDE          ~              1    
+STRING         "i"            1     i
+RIGHT_PAREN    )              1    
+LINE_END       \n             2    
+IDENTIFIER     print          2    
+LEFT_PAREN     (              2    
+STRING         "H"            2     H
+PLUS           +              2    
+STRING         "i"            2     i
+RIGHT_PAREN    )              2    
+LINE_END       \n             2    
+EOF                           2    

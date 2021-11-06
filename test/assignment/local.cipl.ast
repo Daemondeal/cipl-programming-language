@@ -1,0 +1,10 @@
+pass
+(block
+    (let a before)
+    (expression (call print a))
+    (expression (assign a after))
+    (expression (call print a))
+    (expression (call print (assign a arg)))
+    (expression (call print a))
+)
+

@@ -4,13 +4,13 @@ LEFT_PAREN     (              1
 NOT            not            1    
 TRUE           true           1    
 RIGHT_PAREN    )              1    
-LINE_END       \n             2     0
+LINE_END       \n             2    
 IDENTIFIER     print          2    
 LEFT_PAREN     (              2    
 NOT            not            2    
 FALSE          false          2    
 RIGHT_PAREN    )              2    
-LINE_END       \n             3     0
+LINE_END       \n             3    
 IDENTIFIER     print          3    
 LEFT_PAREN     (              3    
 NOT            not            3    

@@ -1,0 +1,55 @@
+Token          Lexeme         Line 
+PROC           proc           1    
+IDENTIFIER     return_arg     1    
+LEFT_PAREN     (              1    
+IDENTIFIER     arg            1    
+RIGHT_PAREN    )              1    
+COLON          :              1    
+LINE_END       \n             2    
+INDENT                        2    
+RETURN         return         2    
+IDENTIFIER     arg            2    
+LINE_END       \n             3    
+DEDENT                        4    
+PROC           proc           4    
+IDENTIFIER     return_fun_call_with_arg4    
+LEFT_PAREN     (              4    
+IDENTIFIER     pr             4    
+COMMA          ,              4    
+IDENTIFIER     arg            4    
+RIGHT_PAREN    )              4    
+COLON          :              4    
+LINE_END       \n             5    
+INDENT                        5    
+RETURN         return         5    
+IDENTIFIER     return_arg     5    
+LEFT_PAREN     (              5    
+IDENTIFIER     pr             5    
+RIGHT_PAREN    )              5    
+LEFT_PAREN     (              5    
+IDENTIFIER     arg            5    
+RIGHT_PAREN    )              5    
+LINE_END       \n             6    
+DEDENT                        7    
+PROC           proc           7    
+IDENTIFIER     print_arg      7    
+LEFT_PAREN     (              7    
+IDENTIFIER     arg            7    
+RIGHT_PAREN    )              7    
+COLON          :              7    
+LINE_END       \n             8    
+INDENT                        8    
+IDENTIFIER     print          8    
+LEFT_PAREN     (              8    
+IDENTIFIER     arg            8    
+RIGHT_PAREN    )              8    
+LINE_END       \n             9    
+DEDENT                        10   
+IDENTIFIER     return_fun_call_with_arg10   
+LEFT_PAREN     (              10   
+IDENTIFIER     print_arg      10   
+COMMA          ,              10   
+STRING         "Hello World"  10    Hello World
+RIGHT_PAREN    )              10   
+LINE_END       \n             10   
+EOF                           10   

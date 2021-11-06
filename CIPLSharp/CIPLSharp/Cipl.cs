@@ -1,5 +1,6 @@
 ﻿using System;
 using System.IO;
+using System.Text.RegularExpressions;
 using CIPLSharp.Printers;
 
 namespace CIPLSharp
@@ -169,7 +170,7 @@ namespace CIPLSharp
         
         public static void Error(Token token, string message)
         {
-            Report(token.Line, $" at `{token.Lexeme}`", message);
+            Report(token.Line, $" at `{Regex.Escape(token.Lexeme)}`", message);
         }
 
         private static void Report(int line, string where, string message)

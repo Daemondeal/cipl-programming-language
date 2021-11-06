@@ -1,0 +1,7 @@
+(expression (call print 123))
+(expression (call print 968132))
+(expression (call print 0))
+(expression (call print (- 0)))
+(expression (call print 123.456))
+(expression (call print (- 0.001)))
+

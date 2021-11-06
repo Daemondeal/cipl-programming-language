@@ -1,0 +1,32 @@
+Token          Lexeme         Line 
+PASS           pass           1    
+LINE_END       \n             2    
+INDENT                        2    
+LET            let            2    
+IDENTIFIER     a              2    
+EQUAL          =              2    
+STRING         "a"            2     a
+LINE_END       \n             3    
+IF             if             3    
+FALSE          false          3    
+COLON          :              3    
+LINE_END       \n             4    
+INDENT                        4    
+PROC           proc           4    
+IDENTIFIER     foo            4    
+LEFT_PAREN     (              4    
+RIGHT_PAREN    )              4    
+COLON          :              4    
+LINE_END       \n             5    
+INDENT                        5    
+IDENTIFIER     a              5    
+LINE_END       \n             6    
+DEDENT                        8    
+DEDENT                        8    
+DEDENT                        8    
+IDENTIFIER     print          10   
+LEFT_PAREN     (              10   
+STRING         "ok"           10    ok
+RIGHT_PAREN    )              10   
+LINE_END       \n             10   
+EOF                           10   

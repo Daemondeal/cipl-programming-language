@@ -1,0 +1,5 @@
+::stdout::
+
+::stderr::
+Error on line 1: Unexpected character '|'
+Error on line 1 at `"World"`: Expected line end after value.

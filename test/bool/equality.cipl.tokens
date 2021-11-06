@@ -3,73 +3,73 @@ IDENTIFIER     print          1
 LEFT_PAREN     (              1    
 STRING         "Should be true"1     Should be true
 RIGHT_PAREN    )              1    
-LINE_END       \n             2     0
+LINE_END       \n             2    
 IDENTIFIER     print          2    
 LEFT_PAREN     (              2    
 TRUE           true           2    
 EQUAL_EQUAL    ==             2    
 TRUE           true           2    
 RIGHT_PAREN    )              2    
-LINE_END       \n             3     0
+LINE_END       \n             3    
 IDENTIFIER     print          3    
 LEFT_PAREN     (              3    
 FALSE          false          3    
 EQUAL_EQUAL    ==             3    
 FALSE          false          3    
 RIGHT_PAREN    )              3    
-LINE_END       \n             4     0
+LINE_END       \n             4    
 IDENTIFIER     print          5    
 LEFT_PAREN     (              5    
 STRING         "Should be false"5     Should be false
 RIGHT_PAREN    )              5    
-LINE_END       \n             6     0
+LINE_END       \n             6    
 IDENTIFIER     print          6    
 LEFT_PAREN     (              6    
 TRUE           true           6    
 EQUAL_EQUAL    ==             6    
 FALSE          false          6    
 RIGHT_PAREN    )              6    
-LINE_END       \n             7     0
+LINE_END       \n             7    
 IDENTIFIER     print          7    
 LEFT_PAREN     (              7    
 FALSE          false          7    
 EQUAL_EQUAL    ==             7    
 TRUE           true           7    
 RIGHT_PAREN    )              7    
-LINE_END       \n             8     0
+LINE_END       \n             8    
 IDENTIFIER     print          10   
 LEFT_PAREN     (              10   
 TRUE           true           10   
 EQUAL_EQUAL    ==             10   
 NUMBER         1              10    1
 RIGHT_PAREN    )              10   
-LINE_END       \n             11    0
+LINE_END       \n             11   
 IDENTIFIER     print          11   
 LEFT_PAREN     (              11   
 FALSE          false          11   
 EQUAL_EQUAL    ==             11   
 NUMBER         0              11    0
 RIGHT_PAREN    )              11   
-LINE_END       \n             12    0
+LINE_END       \n             12   
 IDENTIFIER     print          12   
 LEFT_PAREN     (              12   
 TRUE           true           12   
 EQUAL_EQUAL    ==             12   
 STRING         "true"         12    true
 RIGHT_PAREN    )              12   
-LINE_END       \n             13    0
+LINE_END       \n             13   
 IDENTIFIER     print          13   
 LEFT_PAREN     (              13   
 FALSE          false          13   
 EQUAL_EQUAL    ==             13   
 STRING         "false"        13    false
 RIGHT_PAREN    )              13   
-LINE_END       \n             14    0
+LINE_END       \n             14   
 IDENTIFIER     print          14   
 LEFT_PAREN     (              14   
 FALSE          false          14   
 EQUAL_EQUAL    ==             14   
 STRING         ""             14    
 RIGHT_PAREN    )              14   
-LINE_END       \n             15    0
+LINE_END       \n             15   
 EOF                           16   

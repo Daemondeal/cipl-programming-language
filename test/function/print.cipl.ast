@@ -1,0 +1,6 @@
+(proc foo (body
+    pass
+)
+(expression (call print foo))
+(expression (call print print))
+

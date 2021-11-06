@@ -1,0 +1,5 @@
+::stdout::
+Hi
+
+::stderr::
+Error: Operands must be numbers at line 2

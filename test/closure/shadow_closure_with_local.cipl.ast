@@ -1,0 +1,15 @@
+pass
+(block
+    (let foo closure)
+    (proc f (body
+        pass
+        (block
+            (expression (call print foo))
+            (let foo shadow)
+            (expression (call print foo))
+        )
+        (expression (call print foo))
+    )
+    (expression (call f))
+)
+

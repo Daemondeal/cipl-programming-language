@@ -1,0 +1,6 @@
+Token          Lexeme         Line 
+NUMBER         123            1     123
+LEFT_PAREN     (              1    
+RIGHT_PAREN    )              1    
+LINE_END       \n             1    
+EOF                           1    

@@ -6,7 +6,7 @@ namespace CIPLSharp
     {
         public readonly Token Token;
 
-        public RuntimeError(Token token, string message) : base(message)
+        public RuntimeError(Token token, string message) : base("Error: " + message)
         {
             Token = token;
         }

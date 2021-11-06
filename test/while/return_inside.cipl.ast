@@ -1,0 +1,8 @@
+(proc f (body
+    (while true (body (block
+        (let i i)
+        (return i)
+    ))
+)
+(expression (call print (call f)))
+

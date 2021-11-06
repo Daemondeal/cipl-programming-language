@@ -1,0 +1,11 @@
+pass
+(block
+    (let a a)
+    (if false (then (block
+        (proc foo (body
+            (expression a)
+        )
+    ))
+)
+(expression (call print ok))
+

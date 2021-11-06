@@ -1,0 +1,40 @@
+Token          Lexeme         Line 
+LET            let            1    
+IDENTIFIER     a              1    
+EQUAL          =              1    
+STRING         "global"       1     global
+LINE_END       \n             2    
+INDENT                        2    
+PROC           proc           2    
+IDENTIFIER     assign         2    
+LEFT_PAREN     (              2    
+RIGHT_PAREN    )              2    
+COLON          :              2    
+LINE_END       \n             3    
+INDENT                        3    
+IDENTIFIER     a              3    
+EQUAL          =              3    
+STRING         "assigned"     3     assigned
+LINE_END       \n             4    
+DEDENT                        5    
+LET            let            5    
+IDENTIFIER     a              5    
+EQUAL          =              5    
+STRING         "inner"        5     inner
+LINE_END       \n             6    
+IDENTIFIER     assign         6    
+LEFT_PAREN     (              6    
+RIGHT_PAREN    )              6    
+LINE_END       \n             7    
+IDENTIFIER     print          7    
+LEFT_PAREN     (              7    
+IDENTIFIER     a              7    
+RIGHT_PAREN    )              7    
+LINE_END       \n             8    
+DEDENT                        8    
+IDENTIFIER     print          8    
+LEFT_PAREN     (              8    
+IDENTIFIER     a              8    
+RIGHT_PAREN    )              8    
+LINE_END       \n             8    
+EOF                           8    

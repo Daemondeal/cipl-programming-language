@@ -1,0 +1,4 @@
+proc f(a, b):
+    pass
+
+f(1)

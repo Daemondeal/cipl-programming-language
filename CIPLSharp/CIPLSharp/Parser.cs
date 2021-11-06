@@ -96,7 +96,7 @@ namespace CIPLSharp
                     return Procedure("procedure");
                 return Statement();
             }
-            catch (ParseError error)
+            catch (ParseError _)
             {
                 Synchronize();
                 return null;

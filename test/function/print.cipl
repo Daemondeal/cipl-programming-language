@@ -1,0 +1,5 @@
+proc foo():
+    pass
+
+print(foo)
+print(print)

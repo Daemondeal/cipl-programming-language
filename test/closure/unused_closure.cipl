@@ -1,0 +1,10 @@
+pass
+    let a = "a"
+    if false:
+        proc foo():
+            a
+
+
+# No segfaults if we got to here
+
+print("ok")

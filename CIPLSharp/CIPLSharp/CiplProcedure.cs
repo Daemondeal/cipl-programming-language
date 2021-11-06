@@ -34,7 +34,7 @@ namespace CIPLSharp
 
         public override string ToString()
         {
-            return "<fn " + declaration.Name.Lexeme + ">";
+            return "<proc " + declaration.Name.Lexeme + ">";
         }
     }
 }

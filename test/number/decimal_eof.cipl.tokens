@@ -1,0 +1,5 @@
+Token          Lexeme         Line 
+NUMBER         123            1     123
+DOT            .              1    
+LINE_END       \n             1    
+EOF                           1    

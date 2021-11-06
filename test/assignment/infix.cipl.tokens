@@ -1,0 +1,18 @@
+Token          Lexeme         Line 
+LET            let            1    
+IDENTIFIER     a              1    
+EQUAL          =              1    
+STRING         "a"            1     a
+LINE_END       \n             2    
+LET            let            2    
+IDENTIFIER     b              2    
+EQUAL          =              2    
+STRING         "b"            2     b
+LINE_END       \n             3    
+IDENTIFIER     a              3    
+PLUS           +              3    
+IDENTIFIER     b              3    
+EQUAL          =              3    
+STRING         "value"        3     value
+LINE_END       \n             3    
+EOF                           3    

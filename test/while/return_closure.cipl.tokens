@@ -1,0 +1,48 @@
+Token          Lexeme         Line 
+PROC           proc           1    
+IDENTIFIER     f              1    
+LEFT_PAREN     (              1    
+RIGHT_PAREN    )              1    
+COLON          :              1    
+LINE_END       \n             2    
+INDENT                        2    
+WHILE          while          2    
+TRUE           true           2    
+COLON          :              2    
+LINE_END       \n             3    
+INDENT                        3    
+LET            let            3    
+IDENTIFIER     i              3    
+EQUAL          =              3    
+STRING         "i"            3     i
+LINE_END       \n             4    
+PROC           proc           4    
+IDENTIFIER     g              4    
+LEFT_PAREN     (              4    
+RIGHT_PAREN    )              4    
+COLON          :              4    
+LINE_END       \n             5    
+INDENT                        5    
+IDENTIFIER     print          5    
+LEFT_PAREN     (              5    
+IDENTIFIER     i              5    
+RIGHT_PAREN    )              5    
+LINE_END       \n             6    
+DEDENT                        6    
+RETURN         return         6    
+IDENTIFIER     g              6    
+LINE_END       \n             7    
+DEDENT                        8    
+DEDENT                        8    
+LET            let            8    
+IDENTIFIER     h              8    
+EQUAL          =              8    
+IDENTIFIER     f              8    
+LEFT_PAREN     (              8    
+RIGHT_PAREN    )              8    
+LINE_END       \n             9    
+IDENTIFIER     h              9    
+LEFT_PAREN     (              9    
+RIGHT_PAREN    )              9    
+LINE_END       \n             9    
+EOF                           9    

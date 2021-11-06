@@ -1,0 +1,79 @@
+Token          Lexeme         Line 
+IDENTIFIER     print          1    
+LEFT_PAREN     (              1    
+FALSE          false          1    
+AND            and            1    
+NUMBER         1              1     1
+RIGHT_PAREN    )              1    
+LINE_END       \n             2    
+IDENTIFIER     print          2    
+LEFT_PAREN     (              2    
+TRUE           true           2    
+AND            and            2    
+NUMBER         1              2     1
+RIGHT_PAREN    )              2    
+LINE_END       \n             3    
+IDENTIFIER     print          3    
+LEFT_PAREN     (              3    
+NUMBER         1              3     1
+AND            and            3    
+NUMBER         2              3     2
+AND            and            3    
+FALSE          false          3    
+RIGHT_PAREN    )              3    
+LINE_END       \n             4    
+IDENTIFIER     print          5    
+LEFT_PAREN     (              5    
+NUMBER         1              5     1
+AND            and            5    
+TRUE           true           5    
+RIGHT_PAREN    )              5    
+LINE_END       \n             6    
+IDENTIFIER     print          6    
+LEFT_PAREN     (              6    
+NUMBER         1              6     1
+AND            and            6    
+NUMBER         2              6     2
+AND            and            6    
+NUMBER         3              6     3
+RIGHT_PAREN    )              6    
+LINE_END       \n             7    
+LET            let            8    
+IDENTIFIER     a              8    
+EQUAL          =              8    
+STRING         "before"       8     before
+LINE_END       \n             9    
+LET            let            9    
+IDENTIFIER     b              9    
+EQUAL          =              9    
+STRING         "before"       9     before
+LINE_END       \n             10   
+LEFT_PAREN     (              10   
+IDENTIFIER     a              10   
+EQUAL          =              10   
+TRUE           true           10   
+RIGHT_PAREN    )              10   
+AND            and            10   
+LEFT_PAREN     (              10   
+IDENTIFIER     b              10   
+EQUAL          =              10   
+FALSE          false          10   
+RIGHT_PAREN    )              10   
+AND            and            10   
+LEFT_PAREN     (              10   
+IDENTIFIER     a              10   
+EQUAL          =              10   
+STRING         "bad"          10    bad
+RIGHT_PAREN    )              10   
+LINE_END       \n             11   
+IDENTIFIER     print          11   
+LEFT_PAREN     (              11   
+IDENTIFIER     a              11   
+RIGHT_PAREN    )              11   
+LINE_END       \n             12   
+IDENTIFIER     print          12   
+LEFT_PAREN     (              12   
+IDENTIFIER     b              12   
+RIGHT_PAREN    )              12   
+LINE_END       \n             12   
+EOF                           12   

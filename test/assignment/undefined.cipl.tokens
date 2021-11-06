@@ -1,0 +1,6 @@
+Token          Lexeme         Line 
+IDENTIFIER     undef          1    
+EQUAL          =              1    
+STRING         "what"         1     what
+LINE_END       \n             1    
+EOF                           1    

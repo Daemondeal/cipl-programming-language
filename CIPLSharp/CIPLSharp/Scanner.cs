@@ -220,7 +220,7 @@ namespace CIPLSharp
                     if (Match('='))
                         AddToken(BANG_EQUAL);
                     else
-                        Cipl.Error(line, $"Unexpected character '{c}'.");
+                        Cipl.Error(line, $"Unexpected character '{c}'");
                     
                     break;
                 case '=':
@@ -247,8 +247,8 @@ namespace CIPLSharp
                     line++;
                     if (PeekNextIgnoringWhitespace() == '.' || tokens.Count == 0)
                         break;
-                    if (LastToken().Type != LINE_END)
-                        AddToken(LINE_END, indentationStack.Peek());
+                    if (LastToken().Type != LINE_END && LastToken().Type != DEDENT)
+                        AddToken(LINE_END);
                     
                     // Indentation management
                     while (IsNextLineEmpty())
@@ -290,7 +290,7 @@ namespace CIPLSharp
                     else if (char.IsLetter(c))
                         AddIdentifier();
                     else
-                        Cipl.Error(line, $"Unexpected character '{c}'.");
+                        Cipl.Error(line, $"Unexpected character '{c}'");
                     
                     break;
             }

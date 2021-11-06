@@ -1,0 +1,24 @@
+(let f1 null)
+(let f2 null)
+(let f3 null)
+(let i 1)
+(while (< i 4) (body (block
+    (let j i)
+    (proc f (body
+        (expression (call print j))
+    )
+    (if (== j 1) (then (block
+        (expression (assign f1 f))
+    ) (else (block
+        (if (== j 2) (then (block
+            (expression (assign f2 f))
+        ) (else (block
+            (expression (assign f3 f))
+        ))
+    ))
+    (expression (assign i (+ i 1)))
+))
+(expression (call f1))
+(expression (call f2))
+(expression (call f3))
+

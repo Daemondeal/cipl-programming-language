@@ -1,0 +1,25 @@
+Token          Lexeme         Line 
+LET            let            1    
+IDENTIFIER     a              1    
+EQUAL          =              1    
+STRING         "1\n2\n3\n4"   4     1
+2
+3
+4
+LINE_END       \n             5    
+IDENTIFIER     print          6    
+LEFT_PAREN     (              6    
+STRING         "Start Multiline"6     Start Multiline
+RIGHT_PAREN    )              6    
+LINE_END       \n             7    
+IDENTIFIER     print          7    
+LEFT_PAREN     (              7    
+IDENTIFIER     a              7    
+RIGHT_PAREN    )              7    
+LINE_END       \n             8    
+IDENTIFIER     print          8    
+LEFT_PAREN     (              8    
+STRING         "End Multiline"8     End Multiline
+RIGHT_PAREN    )              8    
+LINE_END       \n             8    
+EOF                           8    

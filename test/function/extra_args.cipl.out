@@ -1,0 +1,4 @@
+::stdout::
+
+::stderr::
+Error: Expected 2 arguments but got 4 for <proc f>() at line 5

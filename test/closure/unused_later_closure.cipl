@@ -1,0 +1,15 @@
+let closure
+
+    let a = "a"
+
+        let b = "b"
+        proc returnA():
+            return a
+        
+        closure = returnA
+
+        if false:
+            proc returnB():
+                return b
+    
+    print(closure())

@@ -1,0 +1,10 @@
+proc return_arg(arg):
+    return arg
+
+proc return_fun_call_with_arg(pr, arg):
+    return return_arg(pr)(arg)
+
+proc print_arg(arg):
+    print(arg)
+
+return_fun_call_with_arg(print_arg, "Hello World")

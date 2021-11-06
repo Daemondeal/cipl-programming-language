@@ -1,0 +1,5 @@
+::stdout::
+<proc foo>
+<native proc>
+
+::stderr::

@@ -1,0 +1,4 @@
+::stdout::
+
+::stderr::
+Error on line 1: End of file reached before a string terminates.

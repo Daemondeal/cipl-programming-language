@@ -29,7 +29,7 @@ namespace CIPLSharp
         {
             var ancestor = Ancestor(distance);
             if (!ancestor.values.ContainsKey(name))
-                throw new Exception("Could not find resolved variable. This could be a resolver bug");
+                throw new Exception($"Could not find resolved variable `{name}`. This could be a resolver bug");
             
             return ancestor.values[name];
         }

@@ -1,0 +1,45 @@
+Token          Lexeme         Line 
+LET            let            1    
+IDENTIFIER     c              1    
+EQUAL          =              1    
+NUMBER         0              1     0
+LINE_END       \n             2    
+WHILE          while          2    
+IDENTIFIER     c              2    
+LESS           <              2    
+NUMBER         3              2     3
+COLON          :              2    
+IDENTIFIER     print          2    
+LEFT_PAREN     (              2    
+IDENTIFIER     c              2    
+EQUAL          =              2    
+IDENTIFIER     c              2    
+PLUS           +              2    
+NUMBER         1              2     1
+RIGHT_PAREN    )              2    
+LINE_END       \n             3    
+LET            let            4    
+IDENTIFIER     a              4    
+EQUAL          =              4    
+NUMBER         0              4     0
+LINE_END       \n             5    
+WHILE          while          5    
+IDENTIFIER     a              5    
+LESS           <              5    
+NUMBER         3              5     3
+COLON          :              5    
+LINE_END       \n             6    
+INDENT                        6    
+IDENTIFIER     print          6    
+LEFT_PAREN     (              6    
+IDENTIFIER     a              6    
+RIGHT_PAREN    )              6    
+LINE_END       \n             7    
+IDENTIFIER     a              7    
+EQUAL          =              7    
+IDENTIFIER     a              7    
+PLUS           +              7    
+NUMBER         1              7     1
+LINE_END       \n             8    
+DEDENT                        8    
+EOF                           8    

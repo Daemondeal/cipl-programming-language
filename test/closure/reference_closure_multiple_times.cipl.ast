@@ -1,0 +1,11 @@
+(let f null)
+(block
+    (let a a)
+    (proc f_ (body
+        (expression (call print a))
+        (expression (call print a))
+    )
+    (expression (assign f f_))
+)
+(expression (call f))
+

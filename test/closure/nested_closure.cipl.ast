@@ -1,0 +1,21 @@
+(let f null)
+(proc f1 (body
+    (let a a)
+    (proc f2 (body
+        (let b b)
+        (proc f3 (body
+            (let c c)
+            (proc f4 (body
+                (expression (call print a))
+                (expression (call print b))
+                (expression (call print c))
+            )
+            (expression (assign f f4))
+        )
+        (expression (call f3))
+    )
+    (expression (call f2))
+)
+(expression (call f1))
+(expression (call f))
+

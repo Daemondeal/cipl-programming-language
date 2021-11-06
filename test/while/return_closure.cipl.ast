@@ -1,0 +1,12 @@
+(proc f (body
+    (while true (body (block
+        (let i i)
+        (proc g (body
+            (expression (call print i))
+        )
+        (return g)
+    ))
+)
+(let h (call f))
+(expression (call h))
+

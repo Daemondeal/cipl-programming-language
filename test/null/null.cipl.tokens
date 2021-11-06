@@ -1,0 +1,7 @@
+Token          Lexeme         Line 
+IDENTIFIER     print          1    
+LEFT_PAREN     (              1    
+NULL           null           1    
+RIGHT_PAREN    )              1    
+LINE_END       \n             1    
+EOF                           1    

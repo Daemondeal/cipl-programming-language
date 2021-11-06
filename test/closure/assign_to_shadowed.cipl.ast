@@ -1,0 +1,11 @@
+(let a global)
+(block
+    (proc assign (body
+        (expression (assign a assigned))
+    )
+    (let a inner)
+    (expression (call assign))
+    (expression (call print a))
+)
+(expression (call print a))
+

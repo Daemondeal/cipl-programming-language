@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -38,6 +39,7 @@ namespace CIPLSharp
             var scope = scopes.Peek();
             if (scope.ContainsKey(name.Lexeme))
                 Cipl.Error(name, "There's already a variable with this name in this scope");
+            
             scope[name.Lexeme] = false;
         }
 
@@ -68,11 +70,11 @@ namespace CIPLSharp
 
         private void ResolveLocal(Expr expr, Token name)
         {
-            for (var i = scopes.Count - 1; i >= 0; i--)
+            for (var i = 0; i < scopes.Count; i++)
             {
                 if (scopes.ElementAt(i).ContainsKey(name.Lexeme))
                 {
-                    interpreter.Resolve(expr, scopes.Count - 1 - i);
+                    interpreter.Resolve(expr, i);
                     return;
                 }
             }
@@ -122,7 +124,7 @@ namespace CIPLSharp
         public object VisitUnaryExpr(Expr.Unary expr)
         {
             Resolve(expr.Right);
-            
+
             return null;
         }
 

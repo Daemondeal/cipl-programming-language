@@ -1,0 +1,98 @@
+Token          Lexeme         Line 
+LET            let            1    
+IDENTIFIER     f1             1    
+LINE_END       \n             2    
+LET            let            2    
+IDENTIFIER     f2             2    
+LINE_END       \n             3    
+LET            let            3    
+IDENTIFIER     f3             3    
+LINE_END       \n             4    
+LET            let            5    
+IDENTIFIER     i              5    
+EQUAL          =              5    
+NUMBER         1              5     1
+LINE_END       \n             6    
+WHILE          while          6    
+IDENTIFIER     i              6    
+LESS           <              6    
+NUMBER         4              6     4
+COLON          :              6    
+LINE_END       \n             7    
+INDENT                        7    
+LET            let            7    
+IDENTIFIER     j              7    
+EQUAL          =              7    
+IDENTIFIER     i              7    
+LINE_END       \n             8    
+PROC           proc           8    
+IDENTIFIER     f              8    
+LEFT_PAREN     (              8    
+RIGHT_PAREN    )              8    
+COLON          :              8    
+LINE_END       \n             9    
+INDENT                        9    
+IDENTIFIER     print          9    
+LEFT_PAREN     (              9    
+IDENTIFIER     j              9    
+RIGHT_PAREN    )              9    
+LINE_END       \n             10   
+DEDENT                        11   
+IF             if             11   
+IDENTIFIER     j              11   
+EQUAL_EQUAL    ==             11   
+NUMBER         1              11    1
+COLON          :              11   
+LINE_END       \n             12   
+INDENT                        12   
+IDENTIFIER     f1             12   
+EQUAL          =              12   
+IDENTIFIER     f              12   
+LINE_END       \n             13   
+DEDENT                        13   
+ELSE           else           13   
+COLON          :              13   
+LINE_END       \n             14   
+INDENT                        14   
+IF             if             14   
+IDENTIFIER     j              14   
+EQUAL_EQUAL    ==             14   
+NUMBER         2              14    2
+COLON          :              14   
+LINE_END       \n             15   
+INDENT                        15   
+IDENTIFIER     f2             15   
+EQUAL          =              15   
+IDENTIFIER     f              15   
+LINE_END       \n             16   
+DEDENT                        16   
+ELSE           else           16   
+COLON          :              16   
+LINE_END       \n             17   
+INDENT                        17   
+IDENTIFIER     f3             17   
+EQUAL          =              17   
+IDENTIFIER     f              17   
+LINE_END       \n             18   
+DEDENT                        19   
+DEDENT                        19   
+IDENTIFIER     i              19   
+EQUAL          =              19   
+IDENTIFIER     i              19   
+PLUS           +              19   
+NUMBER         1              19    1
+LINE_END       \n             20   
+DEDENT                        22   
+IDENTIFIER     f1             22   
+LEFT_PAREN     (              22   
+RIGHT_PAREN    )              22   
+LINE_END       \n             23   
+IDENTIFIER     f2             23   
+LEFT_PAREN     (              23   
+RIGHT_PAREN    )              23   
+LINE_END       \n             24   
+IDENTIFIER     f3             24   
+LEFT_PAREN     (              24   
+RIGHT_PAREN    )              24   
+LINE_END       \n             24   
+EOF                           24   

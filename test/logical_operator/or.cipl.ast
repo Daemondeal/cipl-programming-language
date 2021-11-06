@@ -1,0 +1,12 @@
+(expression (call print (or 1 true)))
+(expression (call print (or false 1)))
+(expression (call print (or (or false false) true)))
+(expression (call print (or false false)))
+(expression (call print (or (or false false) false)))
+(expression (call print (or (or false false) null)))
+(let a before)
+(let b before)
+(expression (or (or (group (assign a false)) (group (assign b true))) (group (assign a bad))))
+(expression (call print a))
+(expression (call print b))
+

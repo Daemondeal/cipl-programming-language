@@ -1,0 +1,12 @@
+pass
+    let f
+
+        let a = "a"
+        proc f_():
+            print(a)
+        
+        f = f_
+
+    pass
+        let b = "b"
+        f() # Should print a

@@ -1,0 +1,9 @@
+proc f():
+    while true:
+        let i = "i"
+        proc g():
+            print(i)
+        return g
+
+let h = f()
+h() # Expect 1

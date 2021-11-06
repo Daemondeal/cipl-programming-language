@@ -1,0 +1,5 @@
+(let a before)
+(let c (assign a var))
+(expression (call print a))
+(expression (call print c))
+

@@ -1,0 +1,7 @@
+let c = 0
+while c < 3: print(c = c + 1)
+
+let a = 0
+while a < 3:
+    print(a)
+    a = a + 1
