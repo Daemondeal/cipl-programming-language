@@ -1,0 +1,12 @@
+class Animal:
+    eat():
+        println("chomp")
+
+class Dog extends Animal:
+    eat():
+        super.eat()
+        println("bau")
+
+let dog = Dog()
+
+dog.eat()
