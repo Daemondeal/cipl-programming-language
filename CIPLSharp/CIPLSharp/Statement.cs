@@ -15,6 +15,7 @@ namespace CIPLSharp
             T VisitBreakStatement(Break statement);
             T VisitPassStatement(Pass statement);
             T VisitBlockStatement(Block statement);
+            T VisitClassStatement(Class statement);
         }
 
         public abstract T Accept<T>(IVisitor<T> visitor);
@@ -157,6 +158,22 @@ namespace CIPLSharp
             public override T Accept<T>(IVisitor<T> visitor)
             {
                 return visitor.VisitBlockStatement(this);
+            }
+        }
+        public class Class : Statement
+        {
+            public readonly Token Name;
+            public readonly List<Statement.Procedure> Methods;
+
+            public Class(Token name, List<Statement.Procedure> methods)
+            {
+                Name = name;
+                Methods = methods;
+            }
+
+            public override T Accept<T>(IVisitor<T> visitor)
+            {
+                return visitor.VisitClassStatement(this);
             }
         }
     }

@@ -1,0 +1,9 @@
+class Greeter:
+    init(greeting):
+        this.greeting = greeting
+
+    greet():
+        print(this.greeting)
+
+Greeter("Hello World").greet()
+Greeter("Hi there").greet()

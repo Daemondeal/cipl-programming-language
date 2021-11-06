@@ -102,7 +102,9 @@ namespace CIPLSharp
         private static void CheckNumberOperands(Token op, params object[] operands)
         {
             if (operands.Any(obj => obj is not double))
+            {
                 throw new RuntimeError(op, "Operands must be numbers");
+            }
         }
 
         private object Evaluate(Expr expression)
@@ -206,6 +208,33 @@ namespace CIPLSharp
             return callable.Call(this, arguments);
         }
 
+        public object VisitGetExpr(Expr.Get expr)
+        {
+            var obj = Evaluate(expr.Obj);
+            if (obj is CiplInstance instance)
+                return instance.Get(expr.Name);
+
+            throw new RuntimeError(expr.Name, "Only instances have properties");
+        }
+
+        public object VisitSetExpr(Expr.Set expr)
+        {
+            var obj = Evaluate(expr.Obj);
+
+            if (obj is not CiplInstance)
+                throw new RuntimeError(expr.Name, "Only instances have fields");
+
+            var val = Evaluate(expr.Value);
+            ((CiplInstance) obj).Set(expr.Name, val);
+
+            return val;
+        }
+
+        public object VisitThisExpr(Expr.This expr)
+        {
+            return LookUpVariable(expr.Keyword, expr);
+        }
+
         public object VisitUnaryExpr(Expr.Unary expr)
         {
             var val = Evaluate(expr.Right);
@@ -264,7 +293,7 @@ namespace CIPLSharp
 
         public object VisitProcedureStatement(Statement.Procedure statement)
         {
-            var procedure = new CiplProcedure(statement, environment);
+            var procedure = new CiplProcedure(statement, environment, false);
             environment.Define(statement.Name.Lexeme, procedure);
             return null;
         }
@@ -327,6 +356,24 @@ namespace CIPLSharp
         public object VisitBlockStatement(Statement.Block statement)
         {
             ExecuteBlock(statement.Statements, new Environment(environment));
+            return null;
+        }
+
+        public object VisitClassStatement(Statement.Class statement)
+        {
+            environment.Define(statement.Name.Lexeme, null);
+
+            var methods = new Dictionary<string, CiplProcedure>();
+
+            foreach (var method in statement.Methods)
+            {
+                var proc = new CiplProcedure(method, environment, method.Name.Lexeme == CiplClass.InitName);
+                methods[method.Name.Lexeme] = proc;
+            }
+            
+            var ciplClass = new CiplClass(statement.Name.Lexeme, methods);
+            environment.Assign(statement.Name, ciplClass);
+
             return null;
         }
     }

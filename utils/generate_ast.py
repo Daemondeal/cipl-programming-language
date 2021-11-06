@@ -11,6 +11,9 @@ def main():
         ("Logical", "Expr left, Token operatorToken, Expr right"),
         ("Binary", "Expr left, Token operatorToken, Expr right"),
         ("Call", "Expr callee, Token paren, List<Expr> arguments"),
+        ("Get", "Expr obj, Token name"),
+        ("Set", "Expr obj, Token name, Expr value"),
+        ("This", "Token keyword"),
         ("Unary", "Token operatorToken, Expr right"),
         ("Literal", "object value"),
         ("Grouping", "Expr expression"),
@@ -27,7 +30,8 @@ def main():
         ("While", "Expr condition, Statement body"),
         ("Break", "Token breakToken"),
         ("Pass", "Token passToken"),
-        ("Block", "List<Statement> statements")
+        ("Block", "List<Statement> statements"),
+        ("Class", "Token name, List<Statement.Procedure> methods")
     ])
 
 def capitalize(string):

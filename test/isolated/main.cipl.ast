@@ -1,0 +1,17 @@
+(class TestClass
+    (proc test_method (body
+        (return Test)
+    ))
+    (proc second_test (body
+        (return Test2)
+    ))
+    (proc third_test (params a b c) (body
+        (return (+ (+ a b) c))
+    ))
+
+)
+(let instance (call TestClass))
+(expression (call print instance))
+(expression (set test 1 (get pera (get banana instance))))
+(expression (call print (get test (get pera (get banana instance)))))
+

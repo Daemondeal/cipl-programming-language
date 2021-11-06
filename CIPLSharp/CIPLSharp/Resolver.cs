@@ -9,11 +9,21 @@ namespace CIPLSharp
         private readonly Interpreter interpreter;
         private readonly Stack<Dictionary<string, bool>> scopes = new();
         private ProcedureType currentProcedure = ProcedureType.NONE;
+        private ClassType currentClass = ClassType.NONE;
         private bool isInLoop = false;
         
         private enum ProcedureType
         {
-            NONE, PROCEDURE
+            NONE, 
+            PROCEDURE,
+            INITIALIZER,
+            METHOD
+        }
+
+        private enum ClassType
+        {
+            NONE,
+            CLASS
         }
 
         public Resolver(Interpreter interpreter)
@@ -121,6 +131,30 @@ namespace CIPLSharp
             return null;
         }
 
+        public object VisitGetExpr(Expr.Get expr)
+        {
+            Resolve(expr.Obj);
+            return null;
+        }
+
+        public object VisitSetExpr(Expr.Set expr)
+        {
+            Resolve(expr.Value);
+            Resolve(expr.Obj);
+
+            return null;
+        }
+
+        public object VisitThisExpr(Expr.This expr)
+        {
+            if (currentClass == ClassType.NONE)
+            {
+                Cipl.Error(expr.Keyword, "'this' cant be used outside of a class");
+            }
+            ResolveLocal(expr, expr.Keyword);
+            return null;
+        }
+
         public object VisitUnaryExpr(Expr.Unary expr)
         {
             Resolve(expr.Right);
@@ -179,6 +213,8 @@ namespace CIPLSharp
             
             if (statement.Value != null)
             {
+                if (currentProcedure == ProcedureType.INITIALIZER)
+                    Cipl.Error(statement.Keyword, "Can't return a value from an initializer");
                 Resolve(statement.Value);
             }
 
@@ -237,6 +273,33 @@ namespace CIPLSharp
             BeginScope();
             Resolve(statement.Statements);
             EndScope();
+            return null;
+        }
+
+        public object VisitClassStatement(Statement.Class statement)
+        {
+            var enclosingClass = currentClass;
+            currentClass = ClassType.CLASS;
+            
+            Declare(statement.Name);
+            Define(statement.Name);
+            
+            BeginScope();
+            scopes.Peek()["this"] = true;
+
+            foreach (var method in statement.Methods)
+            {
+                var decl = ProcedureType.METHOD;
+                if (method.Name.Lexeme.Equals(CiplClass.InitName))
+                    decl = ProcedureType.INITIALIZER;
+                
+                ResolveProcedure(method, decl);
+            }
+            
+            EndScope();
+
+            currentClass = enclosingClass;
+            
             return null;
         }
     }

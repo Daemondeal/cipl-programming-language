@@ -8,7 +8,7 @@ namespace CIPLSharp
     {
         public readonly Environment Enclosing;
         
-        private readonly Dictionary<string, object> values = new Dictionary<string, object>();
+        private readonly Dictionary<string, object> values = new();
 
         public Environment()
         {

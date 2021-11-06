@@ -94,6 +94,10 @@ namespace CIPLSharp
                     return VariableDeclaration();
                 if (Match(PROC))
                     return Procedure("procedure");
+                if (Match(CLASS))
+                    return ClassDeclaration();
+                
+                
                 return Statement();
             }
             catch (ParseError _)
@@ -103,7 +107,7 @@ namespace CIPLSharp
             }
         }
 
-        private Statement Procedure(string kind)
+        private Statement.Procedure Procedure(string kind)
         {
             var name = Consume(IDENTIFIER, $"Expect {kind} name");
             Consume(LEFT_PAREN, $"Expect '(' after {kind} name");
@@ -130,6 +134,23 @@ namespace CIPLSharp
 
             var body = Block();
             return new Statement.Procedure(name, parameters, body);
+        }
+
+        private Statement ClassDeclaration()
+        {
+            var name = Consume(IDENTIFIER, "Expect class name");
+            Consume(COLON, "Expect colon after class name");
+            Consume(LINE_END, "Expect line end after colon");
+            Consume(INDENT, "Expect indent after class name");
+
+            var methods = new List<Statement.Procedure>();
+            
+            while (!Check(DEDENT) && !IsAtEnd())
+                methods.Add(Procedure("method"));
+
+            Consume(DEDENT, "Expect dedent after class body");
+
+            return new Statement.Class(name, methods);
         }
 
         private Statement VariableDeclaration()
@@ -341,6 +362,8 @@ namespace CIPLSharp
 
                 if (expr is Expr.Variable variable)
                     return new Expr.Assign(variable.Name, val);
+                if (expr is Expr.Get get)
+                    return new Expr.Set(get.Obj, get.Name, val);
 
                 Error(equals, "Invalid assignment target.");
             }
@@ -452,6 +475,11 @@ namespace CIPLSharp
             {
                 if (Match(LEFT_PAREN))
                     expr = FinishCall(expr);
+                else if (Match(DOT))
+                {
+                    var name = Consume(IDENTIFIER, "Expect property name after '.'");
+                    expr = new Expr.Get(expr, name);
+                }
                 else
                     break;
             }
@@ -489,6 +517,9 @@ namespace CIPLSharp
 
             if (Match(NUMBER, STRING))
                 return new Expr.Literal(Previous().Literal);
+
+            if (Match(THIS))
+                return new Expr.This(Previous());
 
             if (Match(IDENTIFIER))
                 return new Expr.Variable(Previous());

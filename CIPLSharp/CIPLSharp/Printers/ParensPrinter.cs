@@ -106,6 +106,21 @@ namespace CIPLSharp.Printers
             return sb.ToString();
         }
 
+        public string VisitGetExpr(Expr.Get expr)
+        {
+            return Parenthesize("get " + expr.Name.Lexeme, expr.Obj);
+        }
+
+        public string VisitSetExpr(Expr.Set expr)
+        {
+            return Parenthesize("set " + expr.Name.Lexeme, expr.Value, expr.Obj);
+        }
+
+        public string VisitThisExpr(Expr.This expr)
+        {
+            return "this";
+        }
+
         public string VisitUnaryExpr(Expr.Unary expr)
         {
             return Parenthesize(expr.OperatorToken.Lexeme, expr.Right);
@@ -154,7 +169,23 @@ namespace CIPLSharp.Printers
                 sb.Append(") ");
             }
 
-            sb.Append(Parenthesize("body", statement.Body));
+            sb.Append(Parenthesize("body", statement.Body)).Append(')');
+            return sb.ToString();
+        }
+        
+        public string VisitClassStatement(Statement.Class statement)
+        {
+            var sb = new StringBuilder();
+            sb.Append("(class ").Append(statement.Name.Lexeme).Append('\n');
+
+            nestingLevel++;
+            foreach (var proc in statement.Methods)
+            {
+                AppendNesting(sb).Append(VisitProcedureStatement(proc)).Append('\n');
+            }
+            nestingLevel--;
+
+            AppendNesting(sb.Append('\n')).Append(')');
             return sb.ToString();
         }
 

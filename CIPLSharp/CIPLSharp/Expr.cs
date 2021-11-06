@@ -9,6 +9,9 @@ namespace CIPLSharp
             T VisitLogicalExpr(Logical expr);
             T VisitBinaryExpr(Binary expr);
             T VisitCallExpr(Call expr);
+            T VisitGetExpr(Get expr);
+            T VisitSetExpr(Set expr);
+            T VisitThisExpr(This expr);
             T VisitUnaryExpr(Unary expr);
             T VisitLiteralExpr(Literal expr);
             T VisitGroupingExpr(Grouping expr);
@@ -70,6 +73,54 @@ namespace CIPLSharp
             public override T Accept<T>(IVisitor<T> visitor)
             {
                 return visitor.VisitCallExpr(this);
+            }
+        }
+        public class Get : Expr
+        {
+            public readonly Expr Obj;
+            public readonly Token Name;
+
+            public Get(Expr obj, Token name)
+            {
+                Obj = obj;
+                Name = name;
+            }
+
+            public override T Accept<T>(IVisitor<T> visitor)
+            {
+                return visitor.VisitGetExpr(this);
+            }
+        }
+        public class Set : Expr
+        {
+            public readonly Expr Obj;
+            public readonly Token Name;
+            public readonly Expr Value;
+
+            public Set(Expr obj, Token name, Expr value)
+            {
+                Obj = obj;
+                Name = name;
+                Value = value;
+            }
+
+            public override T Accept<T>(IVisitor<T> visitor)
+            {
+                return visitor.VisitSetExpr(this);
+            }
+        }
+        public class This : Expr
+        {
+            public readonly Token Keyword;
+
+            public This(Token keyword)
+            {
+                Keyword = keyword;
+            }
+
+            public override T Accept<T>(IVisitor<T> visitor)
+            {
+                return visitor.VisitThisExpr(this);
             }
         }
         public class Unary : Expr

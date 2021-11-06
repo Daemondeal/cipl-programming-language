@@ -1,0 +1,17 @@
+class Test:
+    set_greeting(greeting):
+        this.greeting = greeting
+
+    print_greeting():
+        print(this.greeting)
+
+let instance = Test()
+instance.set_greeting("Hello World!")
+instance.print_greeting()
+
+let instance2 = Test()
+instance2.set_greeting("Hi there!")
+instance2.print_greeting()
+
+instance2.stolen_greeting = instance.print_greeting
+instance2.stolen_greeting() # Should print "Hello World"
