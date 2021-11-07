@@ -15,7 +15,7 @@ void writeLineArray(LineArray *lines, u32 line) {
         usize old_capacity = lines->capacity;
 
         // Grow the capacity until it can fit the new line
-        while (lines->capacity < line) {
+        while (lines->capacity <= line) {
             lines->capacity = GROW_CAPACITY(lines->capacity);
         }
 
@@ -40,7 +40,6 @@ void freeLineArray(LineArray *lines) {
 
 u32 getLineArray(LineArray *lines, usize chunk_index) {
     // RLA Encoding
-    // This does not need to be efficent
     if (lines->capacity == 0) {
         fprintf(stderr, "Line Array out of bounds.\n");
         exit(-1);
@@ -53,13 +52,22 @@ u32 getLineArray(LineArray *lines, usize chunk_index) {
         count += lines->line_data[i];
         i++;
 
-        if (lines->line_data[i] > lines->capacity && (count + lines->line_data[i] > chunk_index)) {
+
+        if (i > lines->capacity && (count <= chunk_index)) {
             fprintf(stderr, "Line Array out of bounds.\n");
             exit(-1);
         }
     }
 
     return i;
+}
+
+void printLineArray(LineArray *lines) {
+    for (usize i = 0; i < lines->capacity; i++) {
+        printf("%d ", lines->line_data[i]);
+    }
+
+    printf("\n");
 }
 
 void initChunk(Chunk *chunk) {
@@ -88,6 +96,24 @@ void freeChunk(Chunk *chunk) {
     freeValueArray(&chunk->constants);
 
     initChunk(chunk);
+}
+
+void pushConstant(Chunk *chunk, Value value, u32 line) {
+    usize constant_index = addConstant(chunk, value);
+
+    if (constant_index <= UINT8_MAX) {
+        pushChunk(chunk, OP_CONSTANT, line);
+        pushChunk(chunk, (u8)constant_index, line);
+    } else {
+        u8 low = constant_index & UINT8_MAX;
+        u8 mid = (constant_index & (usize)(UINT8_MAX << 8)) >> 8;
+        u8 high = (constant_index & (usize)(UINT8_MAX << 16)) >> 16;
+
+        pushChunk(chunk, OP_CONSTANT_LONG, line);
+        pushChunk(chunk, high, line);
+        pushChunk(chunk, mid, line);
+        pushChunk(chunk, low, line);
+    }
 }
 
 usize addConstant(Chunk *chunk, Value value) {

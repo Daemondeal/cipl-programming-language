@@ -7,7 +7,11 @@
 
 typedef enum {
     OP_RETURN,
-    OP_CONSTANT
+    OP_CONSTANT,
+
+    // Used if there are more than 255 constants in the chunk
+    // Takes three bytes as params
+    OP_CONSTANT_LONG
 } OpCode;
 
 typedef struct {
@@ -32,10 +36,14 @@ typedef struct {
 
 void writeLineArray(LineArray *lines, u32 line);
 u32 getLineArray(LineArray *lines, usize chunk_index);
+void printLineArray(LineArray *lines);
 
 void initChunk(Chunk *chunk);
 void pushChunk(Chunk *chunk, u8 byte, u32 line);
 void freeChunk(Chunk *chunk);
+
+
+void pushConstant(Chunk *chunk, Value value, u32 line);
 usize addConstant(Chunk *chunk, Value value);
 
 #endif
