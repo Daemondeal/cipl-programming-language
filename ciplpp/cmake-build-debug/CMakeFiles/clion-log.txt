@@ -1,0 +1,4 @@
+/home/daem/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/213.6777.58/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=/home/daem/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/213.6777.58/bin/ninja/linux/ninja -G Ninja /home/daem/Desktop/cipl-programming-lang/ciplpp
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/daem/Desktop/cipl-programming-lang/ciplpp/cmake-build-debug

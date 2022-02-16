@@ -1,0 +1,12 @@
+# ninja log v5
+1	38	1644493587292314500	CMakeFiles/ciplpp.dir/debug.cpp.o	edc25e300d12803
+1	64	1644493248339193613	CMakeFiles/ciplpp.dir/value.cpp.o	7ae92ee7710f6f72
+1	19	1644493650861039155	build.ninja	dde8a5b38a160fe3
+62	144	1644493596615460559	ciplpp	40a9d4710b45047d
+1	46	1644493587302314299	CMakeFiles/ciplpp.dir/main.cpp.o	f87dbc901a2d708
+0	61	1644493596532128899	CMakeFiles/ciplpp.dir/chunk.cpp.o	b44f682c6becce7b
+0	57	1644494544303341978	CMakeFiles/ciplpp.dir/main.cpp.o	f87dbc901a2d708
+0	70	1644494544313341781	CMakeFiles/ciplpp.dir/chunk.cpp.o	b44f682c6becce7b
+0	77	1644494544323341584	CMakeFiles/ciplpp.dir/debug.cpp.o	edc25e300d12803
+1	78	1644494544323341584	CMakeFiles/ciplpp.dir/vm.cpp.o	13b75de5921d0ef4
+78	161	1644494544403340009	ciplpp	9c4a2d1de06c4c98
