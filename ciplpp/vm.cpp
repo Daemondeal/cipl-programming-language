@@ -72,8 +72,25 @@ InterpretResult VM::run() {
 #undef BINARY_OP
 }
 
-InterpretResult VM::interpret(Chunk &chunk) {
-    m_chunk = &chunk;
-    m_ip = &chunk.code[0];
-    return run();
+// TODO
+InterpretResult VM::interpret(const char *source) {
+    compile(source);
+    return INTERPRET_OK;
+}
+
+void VM::compile(const char *source) {
+    m_scanner.init(source);
+    int line = -1;
+    for (;;) {
+        Token token = m_scanner.scan_token();
+        if (token.line != line) {
+            printf("%4d ", token.line);
+            line = token.line;
+        } else {
+            printf("   | ");
+        }
+        printf("%2d '%.*s'\n", token.type, token.length, token.start);
+
+        if (token.type == TOKEN_EOF) break;
+    }
 }
